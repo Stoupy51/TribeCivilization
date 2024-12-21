@@ -1,0 +1,11 @@
+{
+	"pack": {
+		"pack_format": 61,
+		"description": "Tribe Civilization [1.0.0] by Stoupy51"
+	},
+	"id": "tribe_civilization",
+	"filter": {
+		"block": [{"namespace": "nova_structures","path": "advancement"},{"namespace": "minecraft","path": "advancement"}]
+	}
+}
+

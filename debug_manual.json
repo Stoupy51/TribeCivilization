@@ -1,0 +1,14 @@
+[
+	[
+		{"text": ""},
+		{"text": "Tribe Civilization Manual\n","underlined": true},
+		{"text": "\\u0021\\u0021\\u1020\n\n\n\n\n\n","font": "tribe_civilization:manual","color": "white"},
+		{"text": "Guide spirituel des Nebuliens, ces recettes ont ete decouvertes recemment.","color": "#505050","font": "minecraft:illageralt"}
+	],
+	[
+		{"text": "","font": "tribe_civilization:manual","color": "white"},
+		{"text": "➤ ","font": "minecraft:default","color": "black"},
+		{"text": "Category browser\n","font": "minecraft:default","color": "black","underlined": true},
+		"\\u0022\\u1021\n"
+	]
+]

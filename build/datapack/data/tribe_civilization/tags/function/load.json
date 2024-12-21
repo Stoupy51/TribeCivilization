@@ -1,0 +1,11 @@
+{
+	"values": [
+		{
+			"id": "#tribe_civilization:dependencies",
+			"required": false
+		},
+		"#tribe_civilization:enumerate",
+		"#tribe_civilization:resolve"
+	]
+}
+

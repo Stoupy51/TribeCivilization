@@ -10,7 +10,7 @@ MERGE_FOLDER: str = f"{ROOT}/merge"                 # If a file exists in both m
 BUILD_FOLDER: str = f"{ROOT}/build"                 # Folder where the final datapack and resource pack are built
 ASSETS_FOLDER: str = f"{ROOT}/assets"               # Folder containing the all assets (textures, sounds, ... folders) for the datapack and resource pack
 LIBS_FOLDER: str = f"{ROOT}/libs"                   # The libraries are copied to the build destination, and merged with the datapack using Weld
-BUILD_COPY_DESTINATIONS: tuple[list, list] = (["D:/latest_snapshot/world/datapacks"], ["D:/minecraft/snapshot/resourcepacks"])	# Can be empty lists if you don't want to copy the generated files to other folders.
+BUILD_COPY_DESTINATIONS: tuple[list, list] = (["D:/latest_snapshot/world/datapacks"], ["D:/minecraft/latest/resourcepacks"])	# Can be empty lists if you don't want to copy the generated files to other folders.
 
 
 # Dev constants
@@ -26,8 +26,9 @@ PROJECT_NAME: str = "Tribe Civilization"    # Name of the datapack, used for mes
 VERSION: str = "1.0.0"                      # Project version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
 NAMESPACE: str = "tribe_civilization"       # Simplified version of the datapack name. Used to namespace functions, tags, etc. Should be the same you use in the merge folder.
 DESCRIPTION = f"{PROJECT_NAME} [{VERSION}] by {AUTHOR}" # Pack description displayed in pack.mcmeta
-DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
-    #"energy": {"version":[1, 8, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
+DEPENDENCIES: dict[str, dict[str, object]] = {
+    "random_mob_sizes": {"version":[1, 2, 0], "name":"RandomMobSizes", "url":"https://modrinth.com/datapack/random-mob-sizes-dp"},
+    "iyc": {"version":[1, 2, 0], "name":"ImagineYourCraft", "url":"https://github.com/Stoupy51/ImagineYourCraft"},
 }
 
 
