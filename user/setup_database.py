@@ -31,52 +31,14 @@ def main(config: dict) -> dict[str, dict]:
     # Generate ores in database (add every stuff (found in the textures folder) related to the given materials, to the database)
     generate_everything_about_these_materials(config, database, ORES_CONFIGS)
 
-    database["steel_ingot"][WIKI_COMPONENT] = [
-        {"text":"Here is an example of a wiki component, this text component will be displayed as a button in the manual.\n"},
-        {"text":"You can write anything you want here.","color":"yellow"},
-    ]
-
     # Generate custom disc records
     generate_custom_records(config, database, "auto")
 
-    # Add a super stone block that can be crafted with 9 deepslate or stone, and has cobblestone as base block
-    database["super_stone"] = {
-        "id": CUSTOM_BLOCK_VANILLA,												# Placeholder for the base block
-        VANILLA_BLOCK: {"id": "minecraft:cobblestone", "apply_facing": False},	# Base block
-        RESULT_OF_CRAFTING: [													# Crafting recipes (shaped and shapeless examples)
-            {"type":"crafting_shaped","result_count":1,"group":"super_stone","category":"blocks","shape":["XXX","XXX","XXX"],"ingredients": {"X": ingr_repr("minecraft:stone")}},
-            {"type":"crafting_shapeless","result_count":1,"group":"super_stone","category":"blocks","ingredients": 9 * [ingr_repr("minecraft:deepslate")] },
-        ],
-    }
-
-    # Don't forget to add the vanilla blocks for the custom blocks (not automatic even though they was recognized by generate_everything_about_these_materials())
-    database["steel_block"][VANILLA_BLOCK] = {"id": "minecraft:iron_block", "apply_facing": False}			# Placeholder for the base block
-    database["raw_steel_block"][VANILLA_BLOCK] = {"id": "minecraft:raw_iron_block", "apply_facing": False}	# Placeholder for the base block
-
-    # Add a recipe for the future generated manual (the manual recipe will show up in itself)
-    manual_name: str = config.get("manual_name", "Manual")
-    database["manual"] = {
-        "id": "minecraft:written_book", "category": "misc", "item_name": f'"{manual_name}"',
-        RESULT_OF_CRAFTING: [
-            # Put a book and a steel ingot in the crafting grid to get the manual
-            {"type":"crafting_shapeless","result_count":1,"group":"manual","category":"misc","ingredients": [ingr_repr("minecraft:book"), ingr_repr("steel_ingot", namespace)]},
-
-            # Put the manual in the crafting grid to get the manual back (update the manual)
-            {"type":"crafting_shapeless","result_count":1,"group":"manual","category":"misc","ingredients": [ingr_repr("manual", namespace)]},
-        ],
-    }
-
-    # Add item categories to the remaining items (should select 'shazinho' and 'super_stone')
-    for item in database.values():
-        if not item.get("category"):
-            item["category"] = "misc"
-
     # Final adjustments, you definitively should keep them!
-    add_item_model_component(config, database, black_list = ["item_ids","you_don't_want","in_that","list"])
+    add_item_model_component(config, database)
     add_item_name_and_lore_if_missing(config, database)
-    add_private_custom_data_for_namespace(config, database)		# Add a custom namespace for easy item detection
-    add_smithed_ignore_vanilla_behaviours_convention(database)	# Smithed items convention
-    print()
+    add_private_custom_data_for_namespace(config, database)
+    add_smithed_ignore_vanilla_behaviours_convention(database)
 
     # Return database
     return database

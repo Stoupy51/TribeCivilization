@@ -21,25 +21,18 @@ MERGE_LIBS: bool = True                             # Make new zip of merged lib
 
 
 # Project information
-AUTHOR: str = "Stoupy51"                # Author(s) name(s) displayed in pack.mcmeta, also used to add convention.debug tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
-PROJECT_NAME: str = "Python Datapack Template"          # Name of the datapack, used for messages and items lore
-VERSION: str = "1.21.615"               # Project version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
-NAMESPACE: str = "your_namespace"       # Simplified version of the datapack name. Used to namespace functions, tags, etc. Should be the same you use in the merge folder.
+AUTHOR: str = "Stoupy51"                    # Author(s) name(s) displayed in pack.mcmeta, also used to add convention.debug tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
+PROJECT_NAME: str = "Tribe Civilization"    # Name of the datapack, used for messages and items lore
+VERSION: str = "1.0.0"                      # Project version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
+NAMESPACE: str = "tribe_civilization"       # Simplified version of the datapack name. Used to namespace functions, tags, etc. Should be the same you use in the merge folder.
 DESCRIPTION = f"{PROJECT_NAME} [{VERSION}] by {AUTHOR}" # Pack description displayed in pack.mcmeta
 DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
-    # Automagically, the datapack will check for the presence of dependencies and their minimum required versions at runtime
-    # The url is used when the dependency is not found to suggest where to get it
-    # The version dict key contains the minimum required version of the dependency in [major, minor, patch] format
-    # The main key is the dependency namespace to check for
-    # The name can be whatever you want, it's just used in messages
-    
-    # Example for DatapackEnergy >= 1.8.0
     #"energy": {"version":[1, 8, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
 }
 
 
 # Technical constants
-SOURCE_LORE: list[dict] = [{"text": PROJECT_NAME,"italic":True,"color":"blue"}] # Appended lore to any custom item, can be an empty string
+SOURCE_LORE: list[dict] = [{"text":"ICON"},{"text": f" {PROJECT_NAME}","italic":True,"color":"blue"}] # Appended lore to any custom item, can be an empty string
 
 
 # Manual configuration
@@ -54,7 +47,7 @@ MANUAL_NAME: str = f"{PROJECT_NAME} Manual"         # Name of the manual, used f
 MAX_ITEMS_PER_ROW: int = 5                          # Max number of items per row in the manual, should not exceed 6
 MAX_ROWS_PER_PAGE: int = 5                          # Max number of rows per page in the manual, should not exceed 6
 OPENGL_RESOLUTION: int = 256                        # Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
-MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"Modify in config.py the text that will be shown in this first manual page", "color":"#505050"}] # Text for the first page of the manual
+MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"Guide spirituel des Nebuliens, ces recettes ont ete decouvertes recemment.", "color":"#505050","font":"minecraft:illageralt"}]
 
 
 
