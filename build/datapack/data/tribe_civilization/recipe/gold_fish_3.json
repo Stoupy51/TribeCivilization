@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "miscellaneous",
+	"group": "gold_fish",
+	"ingredients": [
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:gold_nugget",
+		"minecraft:tropical_fish"
+	],
+	"result": {
+		"id": "minecraft:golden_apple",
+		"count": 1,
+		"components": {
+			"minecraft:item_model": "tribe_civilization:gold_fish",
+			"minecraft:item_name": "{\"translate\":\"tribe_civilization.gold_fish\", \"italic\": false, \"color\": \"white\"}",
+			"minecraft:lore": [
+				"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"translate\":\"tribe_civilization\", \"italic\": true, \"color\": \"blue\"}]"
+			],
+			"minecraft:custom_data": {
+				"tribe_civilization": {
+					"gold_fish": true
+				},
+				"smithed": {
+					"ignore": {"functionality": true,"crafting": true}
+				}
+			}
+		}
+	}
+}
+

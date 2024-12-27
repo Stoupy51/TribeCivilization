@@ -1,5 +1,6 @@
 {
 	"values": [
+		{"id": "#smithed.crafter:load","required": false},
 		{"id": "#random_mob_sizes:load","required": false},
 		{"id": "#iyc:load","required": false}
 	]

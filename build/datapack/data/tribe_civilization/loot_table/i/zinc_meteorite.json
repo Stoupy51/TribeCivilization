@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "tribe_civilization:zinc_meteorite",
+								"minecraft:item_name": "{\"translate\":\"tribe_civilization.zinc_meteorite\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"translate\":\"tribe_civilization\", \"italic\": true, \"color\": \"blue\"}]"
+								],
+								"minecraft:custom_data": {
+									"tribe_civilization": {"zinc_meteorite": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

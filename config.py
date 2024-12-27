@@ -48,7 +48,7 @@ MANUAL_NAME: str = f"{PROJECT_NAME} Manual"         # Name of the manual, used f
 MAX_ITEMS_PER_ROW: int = 5                          # Max number of items per row in the manual, should not exceed 6
 MAX_ROWS_PER_PAGE: int = 5                          # Max number of rows per page in the manual, should not exceed 6
 OPENGL_RESOLUTION: int = 256                        # Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
-MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"Guide spirituel des Nebuliens, ces recettes ont ete decouvertes recemment.", "color":"#505050"}]
+MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"Guide spirituel des Nébuliens, ces recettes ont été découvertes par ", "color":"#505050"}, {"text":"M. Nebulien", "obfuscated":True}]
 
 
 

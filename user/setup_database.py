@@ -6,6 +6,8 @@ from python_datapack.utils.database_helper import *
 from python_datapack.utils.ingredients import *
 from python_datapack.constants import *
 
+from user.database.items import main as items_main
+
 # Configuration to generate everything about the material based on "steel_ingot"
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
     "steel_ingot":	EquipmentsConfig(
@@ -26,13 +28,15 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 # Main function should return a database
 def main(config: dict) -> dict[str, dict]:
     database: dict[str,dict] = {}
-    namespace: str = config["namespace"]
 
     # Generate ores in database (add every stuff (found in the textures folder) related to the given materials, to the database)
     generate_everything_about_these_materials(config, database, ORES_CONFIGS)
 
     # Generate custom disc records
     generate_custom_records(config, database, "auto")
+
+    # Generate items
+    items_main(config, database)
 
     # Final adjustments, you definitively should keep them!
     add_item_model_component(config, database)

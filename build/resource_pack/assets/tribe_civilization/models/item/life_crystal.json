@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/golden_apple",
+	"textures": {
+		"layer0": "tribe_civilization:item/life_crystal"
+	}
+}
+

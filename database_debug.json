@@ -1,0 +1,125 @@
+{
+	"astral_powder": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"item_model": "tribe_civilization:astral_powder",
+		"item_name": "{\"text\": \"Astral Powder\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"astral_powder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"diamond_meteorite": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"item_model": "tribe_civilization:diamond_meteorite",
+		"item_name": "{\"text\": \"Diamond Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"diamond_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"emerald_meteorite": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"item_model": "tribe_civilization:emerald_meteorite",
+		"item_name": "{\"text\": \"Emerald Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"emerald_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"iron_meteorite": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"item_model": "tribe_civilization:iron_meteorite",
+		"item_name": "{\"text\": \"Iron Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"iron_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zinc_meteorite": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"item_model": "tribe_civilization:zinc_meteorite",
+		"item_name": "{\"text\": \"Zinc Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"zinc_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"blue_star": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"item_model": "tribe_civilization:blue_star",
+		"item_name": "{\"text\": \"Blue Star\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"blue_star": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"purple_crystal": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
+		"item_model": "tribe_civilization:purple_crystal",
+		"item_name": "{\"text\": \"Purple Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"purple_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"yellow_crystal": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
+		"item_model": "tribe_civilization:yellow_crystal",
+		"item_name": "{\"text\": \"Yellow Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"yellow_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"green_crystal": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
+		"item_model": "tribe_civilization:green_crystal",
+		"item_name": "{\"text\": \"Green Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"green_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"cyan_crystal": {
+		"id": "minecraft:command_block",
+		"category": "material",
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}}]}],
+		"item_model": "tribe_civilization:cyan_crystal",
+		"item_name": "{\"text\": \"Cyan Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"cyan_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"gold_fish": {
+		"id": "minecraft:golden_apple",
+		"category": "miscellaneous",
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "gold_fish","category": "miscellaneous","ingredients": [{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:cod"}]},{"type": "crafting_shapeless","result_count": 1,"group": "gold_fish","category": "miscellaneous","ingredients": [{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:salmon"}]},{"type": "crafting_shapeless","result_count": 1,"group": "gold_fish","category": "miscellaneous","ingredients": [{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:tropical_fish"}]}],
+		"item_model": "tribe_civilization:gold_fish",
+		"item_name": "{\"text\": \"Gold Fish\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"gold_fish": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"life_crystal": {
+		"id": "minecraft:golden_apple",
+		"category": "miscellaneous",
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "life_crystal","category": "miscellaneous","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"astral_powder": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
+		"item_model": "tribe_civilization:life_crystal",
+		"item_name": "{\"text\": \"Life Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"lunar_compass": {
+		"id": "minecraft:command_block",
+		"category": "miscellaneous",
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "lunar_compass","category": "miscellaneous","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"diamond_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"emerald_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"iron_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"zinc_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"blue_star": true}}}}]}],
+		"item_model": "tribe_civilization:lunar_compass",
+		"item_name": "{\"text\": \"Lunar Compass\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"lunar_compass": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"letter": {
+		"id": "minecraft:command_block",
+		"category": "miscellaneous",
+		"item_model": "tribe_civilization:letter",
+		"item_name": "{\"text\": \"Letter\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"tribe_civilization": {"letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	}
+}
