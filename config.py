@@ -28,7 +28,7 @@ NAMESPACE: str = "tribe_civilization"       # Simplified version of the datapack
 DESCRIPTION = f"{PROJECT_NAME} [{VERSION}] by {AUTHOR}" # Pack description displayed in pack.mcmeta
 DEPENDENCIES: dict[str, dict[str, object]] = {
     "random_mob_sizes": {"version":[1, 2, 0], "name":"RandomMobSizes", "url":"https://modrinth.com/datapack/random-mob-sizes-dp"},
-    "iyc": {"version":[1, 2, 0], "name":"ImagineYourCraft", "url":"https://github.com/Stoupy51/ImagineYourCraft"},
+    "iyc": {"version":[0, 0, 1], "name":"ImagineYourCraft", "url":"https://github.com/Stoupy51/ImagineYourCraft"},
 }
 
 
@@ -48,7 +48,7 @@ MANUAL_NAME: str = f"{PROJECT_NAME} Manual"         # Name of the manual, used f
 MAX_ITEMS_PER_ROW: int = 5                          # Max number of items per row in the manual, should not exceed 6
 MAX_ROWS_PER_PAGE: int = 5                          # Max number of rows per page in the manual, should not exceed 6
 OPENGL_RESOLUTION: int = 256                        # Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
-MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"Guide spirituel des Nebuliens, ces recettes ont ete decouvertes recemment.", "color":"#505050","font":"minecraft:illageralt"}]
+MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"Guide spirituel des Nebuliens, ces recettes ont ete decouvertes recemment.", "color":"#505050"}]
 
 
 

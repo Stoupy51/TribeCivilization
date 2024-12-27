@@ -14,6 +14,9 @@ def main(config: dict) -> None:
 # Configure RandomMobSizes
 scoreboard players set #min_size random_mob_sizes.sizes 8000
 scoreboard players set #max_size random_mob_sizes.sizes 12000
+
+# Configure SmartOreGeneration
+scoreboard players set _REGION_SIZE smart_ore_generation.data 192
 """)
     write_to_file(f"{build_datapack}/pack.mcmeta", super_json_dump({"filter":{"block":[{"namespace":"nova_structures","path":"advancement"},{"namespace":"minecraft","path":"advancement"}]}}))
 
@@ -26,27 +29,6 @@ execute as @e[type=!player,type=!armor_stand,tag=!{namespace}.checked,{Conventio
 attribute @s minecraft:follow_range base set 1024
 tag @s add {namespace}.checked
 """)
-
-    # Generate ores in the world
-    # CustomOreGeneration.all_with_config(config, ore_configs = {
-    #     "steel_ore": [
-    #         CustomOreGeneration(
-    #             dimensions = ["minecraft:overworld"],
-    #             maximum_height = 50,
-    #             minimum_height = 0,
-    #             veins_per_region = 2,
-    #             vein_size_logic = 0.4,
-    #         )
-    #     ],
-    #     "deepslate_steel_ore": [
-    #         CustomOreGeneration(
-    #             dimensions = ["minecraft:overworld"],
-    #             maximum_height = 0,
-    #             veins_per_region = 2,
-    #             vein_size_logic = 0.4,
-    #         )
-    #     ],
-    # })
 
 
     pass
