@@ -12,6 +12,9 @@ def main(config: dict) -> None:
 execute as @a[sort=random] run function {ns}:player/tick
 """)
 	write_to_function(config, f"{ns}:player/tick", f"""
+# Ensure everyone has his ID
+execute unless score @s {ns}.id matches 1.. run function {ns}:utils/next_id
+
 # Triggers
 scoreboard players enable @s {ns}.trigger
 execute unless score @s {ns}.trigger matches 0 run function {ns}:player/trigger
@@ -24,7 +27,12 @@ execute if score @s {ns}.deathCount matches 1.. run function {ns}:player/particl
 	# Trigger
 	write_to_function(config, f"{ns}:player/trigger", f"""
 # TODO: add functionality
-
+# State 1 vote (loyal or not)
+execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 1 run scoreboard players set @s {ns}.is_not_loyal 0
+execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 2 run scoreboard players set @s {ns}.is_not_loyal 1
+execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 1 run tellraw @s [{{"text":"Votre souhait d'être loyal a été pris en compte !", "color":"green"}}]
+execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 2 run tellraw @s [{{"text":"Votre souhait de ne pas être loyal a été pris en compte !", "color":"red"}}]
+execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 1..2 run playsound ui.button.click
 
 # Reset trigger
 scoreboard players set @s {ns}.trigger 0

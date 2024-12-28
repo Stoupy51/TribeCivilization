@@ -59,6 +59,9 @@ team modify tribe_civilization.green prefix {"text":"[Fire in the Hole] ","color
 # Objectives
 scoreboard objectives add tribe_civilization.deathCount deathCount
 scoreboard objectives add tribe_civilization.trigger trigger
+scoreboard objectives add tribe_civilization.id dummy
+
+scoreboard objectives add tribe_civilization.is_not_loyal dummy
 
 # Setup storage if not already done
 execute unless data storage tribe_civilization:main adventure_zones run data modify storage tribe_civilization:main adventure_zones set value []
