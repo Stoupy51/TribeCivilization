@@ -11,9 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "tribe_civilization:diamond_meteorite",
-								"minecraft:item_name": "{\"translate\":\"tribe_civilization.diamond_meteorite\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": "{\"text\": \"Diamond Meteorite\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
-									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"translate\":\"tribe_civilization\", \"italic\": true, \"color\": \"blue\"}]"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:custom_data": {
 									"tribe_civilization": {"diamond_meteorite": true},
