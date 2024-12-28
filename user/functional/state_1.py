@@ -24,14 +24,15 @@ effect give @a[gamemode=adventure] night_vision infinite 255 true
 effect give @a[gamemode=adventure] darkness infinite 255 true
 
 # Ask creative players to go next state
-tellraw @a[gamemode=creative] [{{"text":"The following players didn't answer the question: ", "color":"red"}},{{"selector":"@a[scores={{{ns}.is_not_loyal=-1}}]"}}]
-tellraw @a[gamemode=creative] [{{"text":"[Click here] to go to the next state", "color":"dark_red", "clickEvent":{{"action":"suggest_command","value":"/function {ns}:states/transition_to_2"}}}}]
+tellraw @a[gamemode=creative] [{{"text":"Les joueurs suivants n'ont pas répondu à la question : ", "color":"red"}},{{"selector":"@a[scores={{{ns}.is_not_loyal=-1}}]"}}]
+tellraw @a[gamemode=creative] [{{"text":"[Cliquez ici] pour passer à l'état suivant", "color":"dark_red", "clickEvent":{{"action":"suggest_command","value":"/function {ns}:states/transition_to_2"}}}}]
 """)
 
 	# Transition to state 2
 	write_to_function(config, f"{ns}:states/transition_to_2", f"""
-# Set state to 2
+# Set state to 2, and default is_not_loyal to 0 (loyal)
 scoreboard players set #state {ns}.data 2
+scoreboard players set @a[scores={{{ns}.is_not_loyal=-1}}] {ns}.is_not_loyal 0
 
 # TODO: teams and teleportations
 """)

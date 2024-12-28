@@ -49,13 +49,13 @@ execute unless data storage {ns}:main adventure_zones run data modify storage {n
 scoreboard players set #state {ns}.data 0
 
 # Define camps zones
-tellraw @s [{{"text":"Please define the following camps zones in the world:","color":"red"}}]
+tellraw @s [{{"text":"Veuillez définir les zones de camps suivantes dans le monde :","color":"red"}}]
 tellraw @s [{{"text":"- [{DARK_AQUA}]","color":"dark_aqua","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'dark_aqua')}"}}}}]
 tellraw @s [{{"text":"- [{YELLOW}]","color":"yellow","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'yellow')}"}}}}]
 tellraw @s [{{"text":"- [{PURPLE}]","color":"dark_purple","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'purple')}"}}}}]
 tellraw @s [{{"text":"- [{GREEN}]","color":"green","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'green')}"}}}}]
 
-tellraw @s [{{"text":"Don't forget to add [adventure zones]!","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
+tellraw @s [{{"text":"N'oubliez pas d'ajouter les [zones d'aventure] !","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
 """)
 	
 	# Add adventure zone functions
