@@ -40,7 +40,7 @@ execute unless data storage {ns}:main adventure_zones run data modify storage {n
 """)
 
 	# Setup function
-	camp_command: str = f"data modify storage {ns}:main camp_XX set value {{x: 0, y: 0, z: 0}}"
+	camp_command: str = f"/data modify storage {ns}:main camp_XX set value {{x: 0, y: 0, z: 0}}"
 	write_to_function(config, f"{ns}:setup", f"""
 # Reset state
 scoreboard players set #state {ns}.data 0
@@ -52,7 +52,7 @@ tellraw @s [{{"text":"- [{YELLOW}]","color":"yellow","clickEvent":{{"action":"su
 tellraw @s [{{"text":"- [{PURPLE}]","color":"dark_purple","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'purple')}"}}}}]
 tellraw @s [{{"text":"- [{GREEN}]","color":"green","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'green')}"}}}}]
 
-tellraw @s [{{"text":"Don't forget to add [adventure zones], they have been reset!","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
+tellraw @s [{{"text":"Don't forget to add [adventure zones]!","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
 """)
 	
 	# Add adventure zone functions
@@ -61,11 +61,15 @@ $data modify storage {ns}:main adventure_zones append value {{x: $(x), y: $(y), 
 """)
 	write_to_versioned_file(config, "second", f"""
 # Each second loop for every adventure zone
+tag @a[tag={ns}.adventure_zone] add {ns}.previously_adventure_zone
+tag @a[tag=!{ns}.adventure_zone] add {ns}.previously_survival_zone
 tag @a[tag={ns}.adventure_zone] remove {ns}.adventure_zone
 data modify storage {ns}:temp copy set from storage {ns}:main adventure_zones
 execute if data storage {ns}:temp copy[0] run function {ns}:utils/adventure_zone_loop with storage {ns}:temp copy[0]
-gamemode survival @a[gamemode=adventure,tag=!{ns}.adventure_zone]
-gamemode adventure @a[gamemode=survival,tag={ns}.adventure_zone]
+gamemode survival @a[gamemode=adventure,tag=!{ns}.adventure_zone,tag={ns}.previously_adventure_zone]
+gamemode adventure @a[gamemode=survival,tag={ns}.adventure_zone,tag={ns}.previously_survival_zone]
+tag @a[tag={ns}.previously_adventure_zone] remove {ns}.previously_adventure_zone
+tag @a[tag={ns}.previously_survival_zone] remove {ns}.previously_survival_zone
 """)
 	write_to_function(config, f"{ns}:utils/adventure_zone_loop", f"""
 # Check if player is in the zone
