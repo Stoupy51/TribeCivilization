@@ -16,7 +16,9 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 
 	## Material items
 	# Basic items
-	database["astral_powder"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
+	database["astral_powder"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, RESULT_OF_CRAFTING: [
+		{"type":"crafting_shapeless","result_count":4,"group":"astral_powder","category":MATERIAL,"ingredients": [ingr_repr("blue_star", namespace)]},
+	]}
 	database["diamond_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
 	database["emerald_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
 	database["iron_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}

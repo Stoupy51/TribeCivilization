@@ -2,6 +2,7 @@
 	"astral_powder": {
 		"id": "minecraft:command_block",
 		"category": "material",
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 4,"group": "astral_powder","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"blue_star": true}}}}]}],
 		"item_model": "tribe_civilization:astral_powder",
 		"item_name": "{\"text\": \"Astral Powder\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
