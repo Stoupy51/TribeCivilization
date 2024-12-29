@@ -47,6 +47,9 @@ data modify storage {ns}:temp death_location.x set from entity @s LastDeathLocat
 data modify storage {ns}:temp death_location.y set from entity @s LastDeathLocation.pos[1]
 data modify storage {ns}:temp death_location.z set from entity @s LastDeathLocation.pos[2]
 
+# Game over sound
+execute at @s run playsound {ns}:game_over ambient @s
+
 # Particles and playsound, reset death count, and make sure spectator mode
 function {ns}:player/on_death_location_macro with storage {ns}:temp death_location
 scoreboard players reset @s {ns}.deathCount

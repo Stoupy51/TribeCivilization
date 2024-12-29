@@ -3,6 +3,10 @@
 		"subtitle": "fetch_me_their_souls",
 		"sounds": ["tribe_civilization:fetch_me_their_souls"]
 	},
+	"game_over": {
+		"subtitle": "game_over",
+		"sounds": ["tribe_civilization:game_over"]
+	},
 	"starting_round": {
 		"subtitle": "starting_round",
 		"sounds": ["tribe_civilization:starting_round"]

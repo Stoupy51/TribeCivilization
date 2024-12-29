@@ -36,11 +36,13 @@ team modify {ns}.yellow prefix {{"text":"[{YELLOW}] ","color":"yellow"}}
 team modify {ns}.purple prefix {{"text":"[{PURPLE}] ","color":"dark_purple"}}
 team modify {ns}.green prefix {{"text":"[{GREEN}] ","color":"green"}}
 
+# Gamerules
+gamerule showDeathMessages false
+
 # Objectives
 scoreboard objectives add {ns}.deathCount deathCount
 scoreboard objectives add {ns}.trigger trigger
 scoreboard objectives add {ns}.id dummy
-
 scoreboard objectives add {ns}.is_not_loyal dummy
 
 # Setup storage if not already done

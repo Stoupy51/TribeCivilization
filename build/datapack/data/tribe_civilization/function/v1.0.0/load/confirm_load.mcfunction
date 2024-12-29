@@ -60,11 +60,13 @@ team modify tribe_civilization.yellow prefix {"translate":"tribe_civilization.th
 team modify tribe_civilization.purple prefix {"translate":"tribe_civilization.dream_flower","color":"dark_purple"}
 team modify tribe_civilization.green prefix {"translate":"tribe_civilization.fire_in_the_hole","color":"green"}
 
+# Gamerules
+gamerule showDeathMessages false
+
 # Objectives
 scoreboard objectives add tribe_civilization.deathCount deathCount
 scoreboard objectives add tribe_civilization.trigger trigger
 scoreboard objectives add tribe_civilization.id dummy
-
 scoreboard objectives add tribe_civilization.is_not_loyal dummy
 
 # Setup storage if not already done
