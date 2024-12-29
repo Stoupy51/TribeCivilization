@@ -25,4 +25,5 @@ function tribe_civilization:teams/teleport with storage tribe_civilization:main 
 function tribe_civilization:teams/teleport with storage tribe_civilization:main camp_yellow
 function tribe_civilization:teams/teleport with storage tribe_civilization:main camp_purple
 function tribe_civilization:teams/teleport with storage tribe_civilization:main camp_green
+execute as @a at @s run playsound tribe_civilization:starting_round ambient @s
 

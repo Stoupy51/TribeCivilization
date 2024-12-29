@@ -48,6 +48,7 @@ function {ns}:teams/teleport with storage {ns}:main camp_dark_aqua
 function {ns}:teams/teleport with storage {ns}:main camp_yellow
 function {ns}:teams/teleport with storage {ns}:main camp_purple
 function {ns}:teams/teleport with storage {ns}:main camp_green
+execute as @a at @s run playsound {ns}:starting_round ambient @s
 """)
 	
 	# Join team
