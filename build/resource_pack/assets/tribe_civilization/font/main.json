@@ -1,0 +1,6 @@
+{
+	"providers": [
+		{"type": "bitmap","file": "tribe_civilization:font/black.png","ascent": 80,"height": 160,"chars": ["S"]}
+	]
+}
+
