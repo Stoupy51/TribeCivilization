@@ -55,7 +55,10 @@ tellraw @s [{{"text":"- [{YELLOW}]","color":"yellow","clickEvent":{{"action":"su
 tellraw @s [{{"text":"- [{PURPLE}]","color":"dark_purple","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'purple')}"}}}}]
 tellraw @s [{{"text":"- [{GREEN}]","color":"green","clickEvent":{{"action":"suggest_command","value":"{camp_command.replace('XX', 'green')}"}}}}]
 
-tellraw @s [{{"text":"N'oubliez pas d'ajouter les [zones d'aventure] !","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
+tellraw @s [{{"text":"\nN'oubliez pas :","color":"red"}}]
+tellraw @s [{{"text":"- [les zones d'aventure]","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
+tellraw @s [{{"text":"- [les Heavy Workbench]","color":"red","clickEvent":{{"action":"suggest_command","value":"/loot give @s loot smithed.crafter:blocks/table"}}}}]
+tellraw @s [{{"text":"- [les météorites]","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:_give_all"}}}}]
 """)
 	
 	# Add adventure zone functions
@@ -81,6 +84,20 @@ $tag @a[x=$(x),y=$(y),z=$(z),dx=$(dx),dy=$(dy),dz=$(dz)] add {ns}.adventure_zone
 # Continue loop
 data remove storage {ns}:temp copy[0]
 execute if data storage {ns}:temp copy[0] run function {ns}:utils/adventure_zone_loop with storage {ns}:temp copy[0]
+""")
+	
+	# Total time function
+	write_to_tick_file(config, f"""
+# Increase total time
+scoreboard players add #game_total_time {ns}.data 1
+""")
+	
+	# Reset function
+	write_to_function(config, f"{ns}:reset", f"""
+scoreboard players set #game_total_time {ns}.data 0
+scoreboard players set #state {ns}.data 0
+tp @a 4240 262 5664
+team leave @a
 """)
 
 	pass

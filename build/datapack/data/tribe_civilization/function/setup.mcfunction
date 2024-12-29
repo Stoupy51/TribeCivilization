@@ -14,5 +14,8 @@ tellraw @s [{"text":"- [The Golden]","color":"yellow","clickEvent":{"action":"su
 tellraw @s [{"text":"- [Dream Flower]","color":"dark_purple","clickEvent":{"action":"suggest_command","value":"/data modify storage tribe_civilization:main camp_purple set value {x: 0, y: 0, z: 0}"}}]
 tellraw @s [{"text":"- [Fire in the Hole]","color":"green","clickEvent":{"action":"suggest_command","value":"/data modify storage tribe_civilization:main camp_green set value {x: 0, y: 0, z: 0}"}}]
 
-tellraw @s [{"translate":"tribe_civilization.noubliez_pas_dajouter_les_zones_daventure","color":"red","clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:utils/adventure_zone_add {x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}"}}]
+tellraw @s [{"translate":"tribe_civilization.noubliez_pas","color":"red"}]
+tellraw @s [{"translate":"tribe_civilization.les_zones_daventure","color":"red","clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:utils/adventure_zone_add {x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}"}}]
+tellraw @s [{"translate":"tribe_civilization.les_heavy_workbench","color":"red","clickEvent":{"action":"suggest_command","value":"/loot give @s loot smithed.crafter:blocks/table"}}]
+tellraw @s [{"translate":"tribe_civilization.les_météorites","color":"red","clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:_give_all"}}]
 

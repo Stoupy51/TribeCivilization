@@ -39,21 +39,20 @@ execute unless score #state {ns}.data matches 0..1 run gamemode spectator @s
 	# Start function
 	backslash_n: str = "\\n" * 20
 	write_to_function(config, f"{ns}:start", f"""
-# TODO: add functionality
-# Update state
+# Update state and game total time
 scoreboard players set #state {ns}.data 1
+scoreboard players set #game_total_time {ns}.data 0
+execute as @a run function {ns}:utils/black_screen_20_40_0
+tag @a[gamemode=creative] add {ns}.op
+
+# Clear all & effects
+effect clear @a[gamemode=adventure]
+clear @a[gamemode=adventure]
 
 # Set is_not_loyal to -1 for all players that are not in creative mode to ask them in the next state
 scoreboard players set @a[gamemode=adventure] {ns}.is_not_loyal -1
 tellraw @a[gamemode=adventure] [{{"text":"{backslash_n}Question simple : Voulez-vous être loyal à votre tribu ?", "color":"aqua"}}]
 tellraw @a[gamemode=adventure] [{{"text":"[Je le serais]", "color":"green","clickEvent":{{"action":"run_command","value":"/trigger {ns}.trigger set 1"}},"hoverEvent":{{"action":"show_text","value":"Ma tribu peut compter sur moi !"}}}},{{"text":" | ","color":"gray"}},{{"text":"[Hell nah]", "color":"red","clickEvent":{{"action":"run_command","value":"/trigger {ns}.trigger set 2"}},"hoverEvent":{{"action":"show_text","value":"Dis moi en plus !"}}}}]
-
-
-
-
-
-
-
 
 """)
 
