@@ -12,6 +12,6 @@ effect give @a[gamemode=adventure] night_vision infinite 255 true
 effect give @a[gamemode=adventure] darkness infinite 255 true
 
 # Ask creative players to go next state
-tellraw @a[gamemode=creative] [{"text":"Les joueurs suivants n'ont pas répondu à la question : ", "color":"red"},{"selector":"@a[scores={tribe_civilization.is_not_loyal=-1}]"}]
-tellraw @a[gamemode=creative] [{"text":"[Cliquez ici] pour passer à l'état suivant", "color":"dark_red", "clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:states/transition_to_2"}}]
+tellraw @a[gamemode=creative] [{"translate":"tribe_civilization.les_joueurs_suivants_nont_pas_répondu_à_la_question", "color":"red"},{"selector":"@a[scores={tribe_civilization.is_not_loyal=-1}]"}]
+tellraw @a[gamemode=creative] [{"translate":"tribe_civilization.cliquez_ici_pour_passer_à_létat_suivant", "color":"dark_red", "clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:states/transition_to_2"}}]
 
