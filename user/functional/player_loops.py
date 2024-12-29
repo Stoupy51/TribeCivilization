@@ -48,13 +48,20 @@ data modify storage {ns}:temp death_location.y set from entity @s LastDeathLocat
 data modify storage {ns}:temp death_location.z set from entity @s LastDeathLocation.pos[2]
 
 # Particles and playsound, reset death count, and make sure spectator mode
-function {ns}:player/particles_on_death_location_macro with storage {ns}:temp death_location
+function {ns}:player/on_death_location_macro with storage {ns}:temp death_location
 scoreboard players reset @s {ns}.deathCount
 gamemode spectator @s
 """)
-	write_to_function(config, f"{ns}:player/particles_on_death_location_macro", f"""
+	write_to_function(config, f"{ns}:player/on_death_location_macro", f"""
+# Particles and playsound
 $execute in $(dimension) positioned $(x) $(y) $(z) run particle block{{block_state:"redstone_wire"}} ~ ~1 ~ 0.35 0.5 0.35 0 500 force @a[distance=..100]
 $execute in $(dimension) positioned $(x) $(y) $(z) run playsound block.beacon.deactivate ambient @a[distance=..100]
+
+# Depending on the team, drop a crystal
+$execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.dark_aqua] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/cyan_crystal
+$execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.yellow] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/yellow_crystal
+$execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.purple] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/purple_crystal
+$execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.green] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/green_crystal
 """)
 
 	pass
