@@ -43,7 +43,7 @@ execute unless score #state {ns}.data matches 0..1 run gamemode spectator @s
 scoreboard players set #state {ns}.data 1
 scoreboard players set #game_total_time {ns}.data 0
 execute as @a run function {ns}:utils/black_screen_20_40_0
-tag @a[gamemode=creative] add {ns}.op
+team join {ns}.op @a[gamemode=creative]
 
 # Clear all & effects
 effect clear @a[gamemode=adventure]

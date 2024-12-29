@@ -2,6 +2,7 @@
 # Imports
 from python_datapack.utils.database_helper import *
 
+OP: str = "Organizer"
 DARK_AQUA: str = "Tidal Wave"
 YELLOW: str = "The Golden"
 PURPLE: str = "Dream Flower"
@@ -14,18 +15,22 @@ def main(config: dict) -> None:
 	# Loading objectives
 	write_to_load_file(config, f"""
 # Add teams
+team add {ns}.op
 team add {ns}.dark_aqua
 team add {ns}.yellow
 team add {ns}.purple
 team add {ns}.green
+team modify {ns}.op nametagVisibility never
 team modify {ns}.dark_aqua nametagVisibility never
 team modify {ns}.yellow nametagVisibility never
 team modify {ns}.purple nametagVisibility never
 team modify {ns}.green nametagVisibility never
+team modify {ns}.op color gray
 team modify {ns}.dark_aqua color dark_aqua
 team modify {ns}.yellow color yellow
 team modify {ns}.purple color dark_purple
 team modify {ns}.green color green
+team modify {ns}.op prefix {{"text":"[{OP}] ","color":"gray"}}
 team modify {ns}.dark_aqua prefix {{"text":"[{DARK_AQUA}] ","color":"dark_aqua"}}
 team modify {ns}.yellow prefix {{"text":"[{YELLOW}] ","color":"yellow"}}
 team modify {ns}.purple prefix {{"text":"[{PURPLE}] ","color":"dark_purple"}}

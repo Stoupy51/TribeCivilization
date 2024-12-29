@@ -8,7 +8,7 @@
 scoreboard players set #state tribe_civilization.data 1
 scoreboard players set #game_total_time tribe_civilization.data 0
 execute as @a run function tribe_civilization:utils/black_screen_20_40_0
-tag @a[gamemode=creative] add tribe_civilization.op
+team join tribe_civilization.op @a[gamemode=creative]
 
 # Clear all & effects
 effect clear @a[gamemode=adventure]

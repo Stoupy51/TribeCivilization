@@ -39,18 +39,22 @@ scoreboard players set #max_size random_mob_sizes.sizes 12000
 scoreboard players set _REGION_SIZE smart_ore_generation.data 192
 
 # Add teams
+team add tribe_civilization.op
 team add tribe_civilization.dark_aqua
 team add tribe_civilization.yellow
 team add tribe_civilization.purple
 team add tribe_civilization.green
+team modify tribe_civilization.op nametagVisibility never
 team modify tribe_civilization.dark_aqua nametagVisibility never
 team modify tribe_civilization.yellow nametagVisibility never
 team modify tribe_civilization.purple nametagVisibility never
 team modify tribe_civilization.green nametagVisibility never
+team modify tribe_civilization.op color gray
 team modify tribe_civilization.dark_aqua color dark_aqua
 team modify tribe_civilization.yellow color yellow
 team modify tribe_civilization.purple color dark_purple
 team modify tribe_civilization.green color green
+team modify tribe_civilization.op prefix {"translate":"tribe_civilization.organizer","color":"gray"}
 team modify tribe_civilization.dark_aqua prefix {"translate":"tribe_civilization.tidal_wave","color":"dark_aqua"}
 team modify tribe_civilization.yellow prefix {"translate":"tribe_civilization.the_golden","color":"yellow"}
 team modify tribe_civilization.purple prefix {"translate":"tribe_civilization.dream_flower","color":"dark_purple"}
