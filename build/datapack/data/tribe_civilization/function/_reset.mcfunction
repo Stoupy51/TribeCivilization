@@ -1,5 +1,5 @@
 
-#> tribe_civilization:reset
+#> tribe_civilization:_reset
 #
 # @within	???
 #

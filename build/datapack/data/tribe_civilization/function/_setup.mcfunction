@@ -1,5 +1,5 @@
 
-#> tribe_civilization:setup
+#> tribe_civilization:_setup
 #
 # @within	???
 #

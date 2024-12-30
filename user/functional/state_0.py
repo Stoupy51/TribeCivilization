@@ -38,7 +38,7 @@ execute unless score #state {ns}.data matches 0..1 run gamemode spectator @s
 
 	# Start function
 	backslash_n: str = "\\n" * 20
-	write_to_function(config, f"{ns}:start", f"""
+	write_to_function(config, f"{ns}:_start", f"""
 # Update state and game total time
 scoreboard players set #state {ns}.data 1
 scoreboard players set #game_total_time {ns}.data 0

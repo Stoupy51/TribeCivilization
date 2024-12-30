@@ -18,7 +18,6 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 
 	## Material items
 	# Basic items
-	# TODO: fix Furnace NBT recipes
 	database["astral_powder"] = {
 		"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL,
 		WIKI_COMPONENT: [{"text":"Ces poudres sont obtenues en brûlant\\nune étoile bleue dans un four.\\n\\n\"Matériau précieux qui doit être chéri\",\\nest une phrase qui devrait le définir."}],

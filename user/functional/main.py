@@ -51,7 +51,7 @@ execute unless data storage {ns}:main adventure_zones run data modify storage {n
 
 	# Setup function
 	camp_command: str = f"/data modify storage {ns}:main camp_XX set value {{x: 0, y: 0, z: 0}}"
-	write_to_function(config, f"{ns}:setup", f"""
+	write_to_function(config, f"{ns}:_setup", f"""
 # Reset state
 scoreboard players set #state {ns}.data 0
 
@@ -100,7 +100,7 @@ scoreboard players add #game_total_time {ns}.data 1
 """)
 	
 	# Reset function
-	write_to_function(config, f"{ns}:reset", f"""
+	write_to_function(config, f"{ns}:_reset", f"""
 scoreboard players set #game_total_time {ns}.data 0
 scoreboard players set #state {ns}.data 0
 tp @a 4240 262 5664
