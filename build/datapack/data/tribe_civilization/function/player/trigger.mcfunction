@@ -4,7 +4,6 @@
 # @within	tribe_civilization:player/tick
 #
 
-# TODO: add functionality
 # State 1 vote (loyal or not)
 execute if score #state tribe_civilization.data matches 1 if score @s tribe_civilization.trigger matches 1 run scoreboard players set @s tribe_civilization.is_not_loyal 0
 execute if score #state tribe_civilization.data matches 1 if score @s tribe_civilization.trigger matches 2 run scoreboard players set @s tribe_civilization.is_not_loyal 1

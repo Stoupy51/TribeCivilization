@@ -6,6 +6,8 @@ from python_datapack.utils.database_helper import *
 def main(config: dict) -> None:
 	ns: str = config["namespace"]
 
+	# TODO: se faire infecté par la créature si on choisi pas loyal (8 joueurs à mettre manuellement)
+
 	# Player loops
 	write_to_versioned_file(config, "tick", f"""
 # Each tick loop for each player
@@ -26,7 +28,6 @@ execute if score @s {ns}.deathCount matches 1.. run function {ns}:player/particl
 	
 	# Trigger
 	write_to_function(config, f"{ns}:player/trigger", f"""
-# TODO: add functionality
 # State 1 vote (loyal or not)
 execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 1 run scoreboard players set @s {ns}.is_not_loyal 0
 execute if score #state {ns}.data matches 1 if score @s {ns}.trigger matches 2 run scoreboard players set @s {ns}.is_not_loyal 1

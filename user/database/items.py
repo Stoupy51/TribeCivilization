@@ -13,8 +13,8 @@ METEOR_WIKI: list[dict] = [{"text":"Ces météorites ont été réparties\\ndans
 CRYSTAL_WIKI: list[dict] = [{"text":"Lors de la mort du survivant de la même couleur,\\nce cristal gorgé de pouvoirs est droppé.\\n\\nOn pourrait dire que ceci est,\\nen quelque sorte, leur âme."}]
 
 # Main function should return a database
-def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
-	namespace: str = config["namespace"]
+def main(config: dict, database: dict[str, dict]) -> None:
+	ns: str = config["namespace"]
 
 	## Material items
 	# Basic items
@@ -22,7 +22,7 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 		"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL,
 		WIKI_COMPONENT: [{"text":"Ces poudres sont obtenues en brûlant\\nune étoile bleue dans un four.\\n\\n\"Matériau précieux qui doit être chéri\",\\nest une phrase qui devrait le définir."}],
 		RESULT_OF_CRAFTING: [
-			{"type":"smelting","result_count":4,"cookingtime":200,"experience":1.0,"group":"astral_powder","category":MATERIAL,"ingredient": ingr_repr("blue_star", namespace)},
+			{"type":"smelting","result_count":4,"cookingtime":200,"experience":1.0,"group":"astral_powder","category":MATERIAL,"ingredient": ingr_repr("blue_star", ns)},
 		]
 	}
 	database["diamond_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
@@ -36,7 +36,7 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 	for color in colors:
 		# Get the other colors and create a list of ingredients (3 other = 1 of the current color)
 		other_colors: list[str] = [c for c in colors if c != color]
-		ingredients: list[dict] = [ingr_repr(f"{c}_crystal", namespace) for c in other_colors]
+		ingredients: list[dict] = [ingr_repr(f"{c}_crystal", ns) for c in other_colors]
 
 		# Add the item to the database (3 other crystals = 1 of the current color)
 		database[f"{color}_crystal"] = {
@@ -67,11 +67,11 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 		WIKI_COMPONENT: [{"text":"Chaque cristal de vie que vous consommez\\nvous donnera un demi-coeur supplémentaire.\\n\\nCependant, la limite est de 10 cristaux de vie consommés."}],
 		RESULT_OF_CRAFTING: [
 			{"type":"crafting_shapeless","result_count":1,"group":"life_crystal","category":MISCELLANEOUS,"ingredients": [
-				ingr_repr("astral_powder", namespace),
-				ingr_repr("purple_crystal", namespace),
-			ingr_repr("yellow_crystal", namespace),
-			ingr_repr("green_crystal", namespace),
-			ingr_repr("cyan_crystal", namespace)
+				ingr_repr("astral_powder", ns),
+				ingr_repr("purple_crystal", ns),
+			ingr_repr("yellow_crystal", ns),
+			ingr_repr("green_crystal", ns),
+			ingr_repr("cyan_crystal", ns)
 		]},
 	]}
 
@@ -81,17 +81,14 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 		WIKI_COMPONENT: [{"text":"Cette boussole guidera votre tribu\\nvers "},{"text":"le temple","obfuscated":True},{"text":" une fois activé."}],
 		RESULT_OF_CRAFTING: [
 		{"type":"crafting_shapeless","result_count":1,"group":"lunar_compass","category":MISCELLANEOUS,"ingredients": [
-			ingr_repr("diamond_meteorite", namespace),
-			ingr_repr("emerald_meteorite", namespace),
-			ingr_repr("iron_meteorite", namespace),
-			ingr_repr("zinc_meteorite", namespace),
-			ingr_repr("blue_star", namespace),
+			ingr_repr("diamond_meteorite", ns),
+			ingr_repr("emerald_meteorite", ns),
+			ingr_repr("iron_meteorite", ns),
+			ingr_repr("zinc_meteorite", ns),
+			ingr_repr("blue_star", ns),
 		]},
 	]}
 
 	# Letter (TODO: find a use for it)
 	database["letter"] = {"id": CUSTOM_ITEM_VANILLA, "category": MISCELLANEOUS, WIKI_COMPONENT: [{"text":"Voici la lettre que votre coinjoint(e) vous a envoyé(e)\\navant que vous ne partiez sur le front.\\n\\nPeut-être que vous aurez une fameuse occasion\\nde la lire une fois votre mission terminée."}]}
-
-	# Return database
-	return database
 
