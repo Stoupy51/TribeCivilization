@@ -2,7 +2,8 @@
 	"astral_powder": {
 		"id": "minecraft:command_block",
 		"category": "material",
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 4,"group": "astral_powder","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"blue_star": true}}}}]}],
+		"wiki_components": [{"text": "Ces poudres sont obtenues en brûlant\\nune étoile bleue dans un four.\\n\\n\"Matériau précieux qui doit être chéri\",\\nest une phrase qui devrait le définir."}],
+		"result_of_crafting": [{"type": "smelting","result_count": 4,"cookingtime": 200,"experience": 1.0,"group": "astral_powder","category": "material","ingredient": {"components": {"minecraft:custom_data": {"tribe_civilization": {"blue_star": true}}}}}],
 		"item_model": "tribe_civilization:astral_powder",
 		"item_name": "{\"text\": \"Astral Powder\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -11,6 +12,7 @@
 	"diamond_meteorite": {
 		"id": "minecraft:command_block",
 		"category": "material",
+		"wiki_components": [{"text": "Ces météorites ont été réparties\\ndans les structures de ce monde.\\n\\nTrouvez chaque type afin de fabriquer\\nla boussole lunaire !"}],
 		"item_model": "tribe_civilization:diamond_meteorite",
 		"item_name": "{\"text\": \"Diamond Meteorite\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -19,6 +21,7 @@
 	"emerald_meteorite": {
 		"id": "minecraft:command_block",
 		"category": "material",
+		"wiki_components": [{"text": "Ces météorites ont été réparties\\ndans les structures de ce monde.\\n\\nTrouvez chaque type afin de fabriquer\\nla boussole lunaire !"}],
 		"item_model": "tribe_civilization:emerald_meteorite",
 		"item_name": "{\"text\": \"Emerald Meteorite\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -27,6 +30,7 @@
 	"iron_meteorite": {
 		"id": "minecraft:command_block",
 		"category": "material",
+		"wiki_components": [{"text": "Ces météorites ont été réparties\\ndans les structures de ce monde.\\n\\nTrouvez chaque type afin de fabriquer\\nla boussole lunaire !"}],
 		"item_model": "tribe_civilization:iron_meteorite",
 		"item_name": "{\"text\": \"Iron Meteorite\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -35,6 +39,7 @@
 	"zinc_meteorite": {
 		"id": "minecraft:command_block",
 		"category": "material",
+		"wiki_components": [{"text": "Ces météorites ont été réparties\\ndans les structures de ce monde.\\n\\nTrouvez chaque type afin de fabriquer\\nla boussole lunaire !"}],
 		"item_model": "tribe_civilization:zinc_meteorite",
 		"item_name": "{\"text\": \"Zinc Meteorite\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -43,6 +48,7 @@
 	"blue_star": {
 		"id": "minecraft:command_block",
 		"category": "material",
+		"wiki_components": [{"text": "Le seul moyen de les obtenir est\\nde patienter lors de la nuit,\\nelles tombent alors du ciel."}],
 		"item_model": "tribe_civilization:blue_star",
 		"item_name": "{\"text\": \"Blue Star\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -51,7 +57,7 @@
 	"purple_crystal": {
 		"id": "minecraft:command_block",
 		"category": "material",
-		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur,\\nce cristal gorgé de pouvoirs est droppé.\\n\\nOn pourrait dire que ceci est,\\nen quelque sorte, leur âme."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
 		"item_model": "tribe_civilization:purple_crystal",
 		"item_name": "{\"text\": \"Purple Crystal\", \"italic\": false, \"color\": \"white\"}",
@@ -61,7 +67,7 @@
 	"yellow_crystal": {
 		"id": "minecraft:command_block",
 		"category": "material",
-		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur,\\nce cristal gorgé de pouvoirs est droppé.\\n\\nOn pourrait dire que ceci est,\\nen quelque sorte, leur âme."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
 		"item_model": "tribe_civilization:yellow_crystal",
 		"item_name": "{\"text\": \"Yellow Crystal\", \"italic\": false, \"color\": \"white\"}",
@@ -71,7 +77,7 @@
 	"green_crystal": {
 		"id": "minecraft:command_block",
 		"category": "material",
-		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur,\\nce cristal gorgé de pouvoirs est droppé.\\n\\nOn pourrait dire que ceci est,\\nen quelque sorte, leur âme."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
 		"item_model": "tribe_civilization:green_crystal",
 		"item_name": "{\"text\": \"Green Crystal\", \"italic\": false, \"color\": \"white\"}",
@@ -81,7 +87,7 @@
 	"cyan_crystal": {
 		"id": "minecraft:command_block",
 		"category": "material",
-		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+		"wiki_components": [{"text": "Lors de la mort du survivant de la même couleur,\\nce cristal gorgé de pouvoirs est droppé.\\n\\nOn pourrait dire que ceci est,\\nen quelque sorte, leur âme."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "team_crystal","category": "material","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}}]}],
 		"item_model": "tribe_civilization:cyan_crystal",
 		"item_name": "{\"text\": \"Cyan Crystal\", \"italic\": false, \"color\": \"white\"}",
@@ -91,6 +97,7 @@
 	"gold_fish": {
 		"id": "minecraft:golden_apple",
 		"category": "miscellaneous",
+		"wiki_components": [{"text": "Ces poissons sont équivalents à des golden apples."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "gold_fish","category": "miscellaneous","ingredients": [{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:cod"}]},{"type": "crafting_shapeless","result_count": 1,"group": "gold_fish","category": "miscellaneous","ingredients": [{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:salmon"}]},{"type": "crafting_shapeless","result_count": 1,"group": "gold_fish","category": "miscellaneous","ingredients": [{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:gold_nugget"},{"item": "minecraft:tropical_fish"}]}],
 		"item_model": "tribe_civilization:gold_fish",
 		"item_name": "{\"text\": \"Gold Fish\", \"italic\": false, \"color\": \"white\"}",
@@ -100,6 +107,7 @@
 	"life_crystal": {
 		"id": "minecraft:golden_apple",
 		"category": "miscellaneous",
+		"wiki_components": [{"text": "Chaque cristal de vie que vous consommez\\nvous donnera un demi-coeur supplémentaire.\\n\\nCependant, la limite est de 10 cristaux de vie consommés."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "life_crystal","category": "miscellaneous","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"astral_powder": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"purple_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"yellow_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"green_crystal": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"cyan_crystal": true}}}}]}],
 		"item_model": "tribe_civilization:life_crystal",
 		"item_name": "{\"text\": \"Life Crystal\", \"italic\": false, \"color\": \"white\"}",
@@ -109,6 +117,7 @@
 	"lunar_compass": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",
+		"wiki_components": [{"text": "Cette boussole guidera votre tribu\\nvers "},{"text": "le temple","obfuscated": true},{"text": " une fois activé."}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "lunar_compass","category": "miscellaneous","ingredients": [{"components": {"minecraft:custom_data": {"tribe_civilization": {"diamond_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"emerald_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"iron_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"zinc_meteorite": true}}}},{"components": {"minecraft:custom_data": {"tribe_civilization": {"blue_star": true}}}}]}],
 		"item_model": "tribe_civilization:lunar_compass",
 		"item_name": "{\"text\": \"Lunar Compass\", \"italic\": false, \"color\": \"white\"}",
@@ -118,6 +127,7 @@
 	"letter": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",
+		"wiki_components": [{"text": "Voici la lettre que votre coinjoint(e) vous a envoyé(e)\\navant que vous ne partiez sur le front.\\n\\nPeut-être que vous aurez une fameuse occasion\\nde la lire une fois votre mission terminée."}],
 		"item_model": "tribe_civilization:letter",
 		"item_name": "{\"text\": \"Letter\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"text\": \" Tribe Civilization\", \"italic\": true, \"color\": \"blue\"}]"],

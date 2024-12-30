@@ -9,6 +9,8 @@ from python_datapack.constants import *
 # Categories
 MATERIAL: str = "material"
 MISCELLANEOUS: str = "miscellaneous"
+METEOR_WIKI: list[dict] = [{"text":"Ces météorites ont été réparties\\ndans les structures de ce monde.\\n\\nTrouvez chaque type afin de fabriquer\\nla boussole lunaire !"}]
+CRYSTAL_WIKI: list[dict] = [{"text":"Lors de la mort du survivant de la même couleur,\\nce cristal gorgé de pouvoirs est droppé.\\n\\nOn pourrait dire que ceci est,\\nen quelque sorte, leur âme."}]
 
 # Main function should return a database
 def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
@@ -16,14 +18,19 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 
 	## Material items
 	# Basic items
-	database["astral_powder"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, RESULT_OF_CRAFTING: [
-		{"type":"crafting_shapeless","result_count":4,"group":"astral_powder","category":MATERIAL,"ingredients": [ingr_repr("blue_star", namespace)]},
-	]}
-	database["diamond_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
-	database["emerald_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
-	database["iron_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
-	database["zinc_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
-	database["blue_star"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL}
+	# TODO: fix Furnace NBT recipes
+	database["astral_powder"] = {
+		"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL,
+		WIKI_COMPONENT: [{"text":"Ces poudres sont obtenues en brûlant\\nune étoile bleue dans un four.\\n\\n\"Matériau précieux qui doit être chéri\",\\nest une phrase qui devrait le définir."}],
+		RESULT_OF_CRAFTING: [
+			{"type":"smelting","result_count":4,"cookingtime":200,"experience":1.0,"group":"astral_powder","category":MATERIAL,"ingredient": ingr_repr("blue_star", namespace)},
+		]
+	}
+	database["diamond_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
+	database["emerald_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
+	database["iron_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
+	database["zinc_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
+	database["blue_star"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: [{"text":"Le seul moyen de les obtenir est\\nde patienter lors de la nuit,\\nelles tombent alors du ciel."}]}
 
 	# Player teams crystals
 	colors: list[str] = ["purple", "yellow", "green", "cyan"]
@@ -35,7 +42,7 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 		# Add the item to the database (3 other crystals = 1 of the current color)
 		database[f"{color}_crystal"] = {
 			"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL,
-			WIKI_COMPONENT: [{"text":"Lors de la mort du survivant de la même couleur, ce crystal est droppé."}],
+			WIKI_COMPONENT: CRYSTAL_WIKI,
 			RESULT_OF_CRAFTING: [{"type":"crafting_shapeless","result_count":1,"group":"team_crystal","category":MATERIAL,"ingredients": ingredients}]
 		}
 
@@ -47,6 +54,7 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 	database["gold_fish"] = {
 		"id": "minecraft:golden_apple",
 		"category": MISCELLANEOUS,
+		WIKI_COMPONENT: [{"text":"Ces poissons sont équivalents à des golden apples."}],
 		RESULT_OF_CRAFTING: [
 			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_nuggets + [ingr_repr("minecraft:cod")]},
 			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_nuggets + [ingr_repr("minecraft:salmon")]},
@@ -55,10 +63,13 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 	}
 
 	# Life Crystal
-	database["life_crystal"] = {"id": "minecraft:golden_apple", "category": MISCELLANEOUS, RESULT_OF_CRAFTING: [
-		{"type":"crafting_shapeless","result_count":1,"group":"life_crystal","category":MISCELLANEOUS,"ingredients": [
-			ingr_repr("astral_powder", namespace),
-			ingr_repr("purple_crystal", namespace),
+	database["life_crystal"] = {
+		"id": "minecraft:golden_apple", "category": MISCELLANEOUS,
+		WIKI_COMPONENT: [{"text":"Chaque cristal de vie que vous consommez\\nvous donnera un demi-coeur supplémentaire.\\n\\nCependant, la limite est de 10 cristaux de vie consommés."}],
+		RESULT_OF_CRAFTING: [
+			{"type":"crafting_shapeless","result_count":1,"group":"life_crystal","category":MISCELLANEOUS,"ingredients": [
+				ingr_repr("astral_powder", namespace),
+				ingr_repr("purple_crystal", namespace),
 			ingr_repr("yellow_crystal", namespace),
 			ingr_repr("green_crystal", namespace),
 			ingr_repr("cyan_crystal", namespace)
@@ -66,7 +77,10 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 	]}
 
 	# Lunar compass (crafted with all 4 meteorites and a blue star)
-	database["lunar_compass"] = {"id": CUSTOM_ITEM_VANILLA, "category": MISCELLANEOUS, RESULT_OF_CRAFTING: [
+	database["lunar_compass"] = {
+		"id": CUSTOM_ITEM_VANILLA, "category": MISCELLANEOUS,
+		WIKI_COMPONENT: [{"text":"Cette boussole guidera votre tribu\\nvers "},{"text":"le temple","obfuscated":True},{"text":" une fois activé."}],
+		RESULT_OF_CRAFTING: [
 		{"type":"crafting_shapeless","result_count":1,"group":"lunar_compass","category":MISCELLANEOUS,"ingredients": [
 			ingr_repr("diamond_meteorite", namespace),
 			ingr_repr("emerald_meteorite", namespace),
@@ -77,7 +91,7 @@ def main(config: dict, database: dict[str, dict]) -> dict[str, dict]:
 	]}
 
 	# Letter (TODO: find a use for it)
-	database["letter"] = {"id": CUSTOM_ITEM_VANILLA, "category": MISCELLANEOUS}
+	database["letter"] = {"id": CUSTOM_ITEM_VANILLA, "category": MISCELLANEOUS, WIKI_COMPONENT: [{"text":"Voici la lettre que votre coinjoint(e) vous a envoyé(e)\\navant que vous ne partiez sur le front.\\n\\nPeut-être que vous aurez une fameuse occasion\\nde la lire une fois votre mission terminée."}]}
 
 	# Return database
 	return database
