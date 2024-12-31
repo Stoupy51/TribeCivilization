@@ -16,6 +16,10 @@ scoreboard players add #game_total_time tribe_civilization.data 1
 # Each tick loop for each player
 execute as @a[sort=random] run function tribe_civilization:player/tick
 
+# If game is running and night time, start the falling stars tick loop
+execute store result score #daytime tribe_civilization.data run time query daytime
+execute if score #state tribe_civilization.data matches 2.. if score #daytime tribe_civilization.data matches 13000..23000 run function tribe_civilization:falling_stars/tick
+
 # Tick function for state 0
 execute if score #state tribe_civilization.data matches 0 run function tribe_civilization:states/tick_0
 
