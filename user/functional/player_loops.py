@@ -58,8 +58,7 @@ gamemode spectator @s
 """)
 	write_to_function(config, f"{ns}:player/on_death_location_macro", f"""
 # Particles and playsound
-$execute in $(dimension) positioned $(x) $(y) $(z) run particle block{{block_state:"redstone_wire"}} ~ ~1 ~ 0.35 0.5 0.35 0 500 force @a[distance=..100]
-$execute in $(dimension) positioned $(x) $(y) $(z) run playsound block.beacon.deactivate ambient @a[distance=..100]
+$execute in $(dimension) positioned $(x) $(y) $(z) run particle block{{block_state:"redstone_wire"}} ~ ~1 ~ 0.35 0.5 0.35 0 666 force @a[distance=..100]
 
 # Depending on the team, drop a crystal
 $execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.dark_aqua] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/cyan_crystal
