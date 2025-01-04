@@ -3,8 +3,8 @@
 from python_datapack.utils.database_helper import *
 
 # Constants
-NIGHT_START: int = 13000
-NIGHT_END: int = 23000
+START_OF_NIGHT: int = 13000
+END_OF_NIGHT: int = 23000
 FALLING_STARS_SPAWN_CHANCE: float = 0.01
 FALLING_STARS_DROP_CHANCE: float = 0.1
 DURATION: int = 30
@@ -20,14 +20,14 @@ def main(config: dict) -> None:
 	TAG: str = f"{ns}.falling_star"
 
 	# Compute how many falling stars to drop per group of players due to probabilities (in average)
-	falling_stars_to_drop: float = (NIGHT_END - NIGHT_START) * FALLING_STARS_SPAWN_CHANCE * FALLING_STARS_DROP_CHANCE
+	falling_stars_to_drop: float = (END_OF_NIGHT - START_OF_NIGHT) * FALLING_STARS_SPAWN_CHANCE * FALLING_STARS_DROP_CHANCE
 	progress(f"Number of falling stars per night and per group of players (in average): {falling_stars_to_drop:.2f}")
 
 	# Add to the tick function a check if night is during
 	write_to_tick_file(config, f"""
 # If game is running and night time, start the falling stars tick loop
 execute store result score #daytime {ns}.data run time query daytime
-execute if score #state {ns}.data matches 2.. if score #daytime {ns}.data matches {NIGHT_START}..{NIGHT_END} run function {ns}:falling_stars/tick
+execute if score #state {ns}.data matches 2.. if score #daytime {ns}.data matches {START_OF_NIGHT}..{END_OF_NIGHT} run function {ns}:falling_stars/tick
 """)
 
 	# Create a random chance predicates
@@ -37,15 +37,25 @@ execute if score #state {ns}.data matches 2.. if score #daytime {ns}.data matche
 	# Tick function
 	write_to_function(config, f"{ns}:falling_stars/tick", f"""
 # If last tick, kill the falling stars
-execute if score #daytime {ns}.data matches {NIGHT_END} as @e[type=item] if data entity @s Item.components."minecraft:custom_data".{ns}.blue_star run kill @s
-execute if score #daytime {ns}.data matches {NIGHT_END} run kill @e[tag={TAG}]
+execute if score #daytime {ns}.data matches {END_OF_NIGHT} as @e[type=item] if data entity @s Item.components."minecraft:custom_data".{ns}.blue_star run kill @s
+execute if score #daytime {ns}.data matches {END_OF_NIGHT} run kill @e[tag={TAG}]
 
-# For each alive player, if they are on surface, spawn a falling star with probability
-# TODO: Not for each player but group of players
-execute as @a[gamemode=!spectator,predicate={ns}:chance/{FALLING_STARS_SPAWN_CHANCE}] at @s positioned over world_surface if entity @s[distance=..5] summon item_display run function {ns}:falling_stars/summon
+# For each alive group of players, if they are on surface, spawn a falling star with probability
+execute as @a[gamemode=!spectator,predicate={ns}:chance/{FALLING_STARS_SPAWN_CHANCE}] at @s positioned over world_surface if entity @s[distance=..5] run function {ns}:falling_stars/selected_players
+tag @a[tag={ns}.selected] remove {ns}.selected
 
 # Tick function for each falling star
 execute as @e[tag={TAG}] at @s run function {ns}:falling_stars/entity_tick
+""")
+	
+	# Selected players function
+	write_to_function(config, f"{ns}:falling_stars/selected_players", f"""
+# If already selected, skip
+execute if entity @s[tag={ns}.selected] run return fail
+
+# Add tag to nearby players and summon falling star
+tag @a[distance=..20] add {ns}.selected
+execute summon item_display run function {ns}:falling_stars/summon
 """)
 
 	# Summon function

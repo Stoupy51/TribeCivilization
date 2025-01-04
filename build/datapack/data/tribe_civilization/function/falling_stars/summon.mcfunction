@@ -1,7 +1,7 @@
 
 #> tribe_civilization:falling_stars/summon
 #
-# @within	tribe_civilization:falling_stars/tick
+# @within	tribe_civilization:falling_stars/selected_players
 #
 
 # Add tags
