@@ -3,14 +3,14 @@
 	"category": "miscellaneous",
 	"group": "gold_fish",
 	"ingredients": [
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
-		"minecraft:gold_nugget",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
+		"minecraft:gold_ingot",
 		"minecraft:tropical_fish"
 	],
 	"result": {

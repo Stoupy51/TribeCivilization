@@ -22,14 +22,23 @@ def main(config: dict, database: dict[str, dict]) -> None:
 		"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL,
 		WIKI_COMPONENT: [{"text":"Ces poudres sont obtenues en brûlant\\nune étoile bleue dans un four.\\n\\n\"Matériau précieux qui doit être chéri\",\\nest une phrase qui devrait le définir."}],
 		RESULT_OF_CRAFTING: [
-			{"type":"smelting","result_count":4,"cookingtime":200,"experience":1.0,"group":"astral_powder","category":MATERIAL,"ingredient": ingr_repr("blue_star", ns)},
+			{"type":"smelting","result_count":2,"cookingtime":200,"experience":1.0,"group":"astral_powder","category":MATERIAL,"ingredient": ingr_repr("blue_star", ns)},
 		]
 	}
 	database["diamond_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
 	database["emerald_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
 	database["iron_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
 	database["zinc_meteorite"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: METEOR_WIKI}
-	database["blue_star"] = {"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL, WIKI_COMPONENT: [{"text":"Le seul moyen de les obtenir est\\nde patienter lors de la nuit,\\nelles tombent alors du ciel."}]}
+	database["blue_star"] = {
+		"id": CUSTOM_ITEM_VANILLA, "category": MATERIAL,
+		WIKI_COMPONENT: [{"text":"Le seul moyen de les obtenir est\\nde patienter lors de la nuit,\\nelles tombent alors du ciel."}],
+		USED_FOR_CRAFTING: [
+			{"type":"crafting_shapeless","result_count":2,"group":"blue_star","category":MATERIAL,"ingredients":[ingr_repr("blue_star", ns), ingr_repr("minecraft:diamond")], "result": ingr_repr("minecraft:diamond")},
+			{"type":"crafting_shapeless","result_count":2,"group":"blue_star","category":MATERIAL,"ingredients":[ingr_repr("blue_star", ns), ingr_repr("minecraft:emerald")], "result": ingr_repr("minecraft:emerald")},
+			{"type":"crafting_shapeless","result_count":4,"group":"blue_star","category":MATERIAL,"ingredients":[ingr_repr("blue_star", ns), ingr_repr("minecraft:gold_ingot")], "result": ingr_repr("minecraft:gold_ingot")},
+			{"type":"crafting_shapeless","result_count":8,"group":"blue_star","category":MATERIAL,"ingredients":[ingr_repr("blue_star", ns), ingr_repr("minecraft:iron_ingot")], "result": ingr_repr("minecraft:iron_ingot")},
+		]
+	}
 
 	# Player teams crystals
 	colors: list[str] = ["purple", "yellow", "green", "cyan"]
@@ -48,16 +57,18 @@ def main(config: dict, database: dict[str, dict]) -> None:
 
 
 	## Miscellaneous items
-	# Gold fish craftable from 8 gold nuggets and 1 fish
-	eight_nuggets: list[dict] = 8 * [ingr_repr("minecraft:gold_nugget")]
+	# Gold fish craftable from 8 gold ingots and 1 fish
+	eight_gold: list[dict] = 8 * [ingr_repr("minecraft:gold_ingot")]
+	eight_powder: list[dict] = 8 * [ingr_repr("astral_powder", ns)]
 	database["gold_fish"] = {
 		"id": "minecraft:golden_apple",
 		"category": MISCELLANEOUS,
 		WIKI_COMPONENT: [{"text":"Ces poissons sont équivalents à des golden apples."}],
 		RESULT_OF_CRAFTING: [
-			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_nuggets + [ingr_repr("minecraft:cod")]},
-			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_nuggets + [ingr_repr("minecraft:salmon")]},
-			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_nuggets + [ingr_repr("minecraft:tropical_fish")]},
+			{"type":"crafting_shapeless","result_count":2,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_powder + [ingr_repr("gold_fish", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_gold + [ingr_repr("minecraft:cod")]},
+			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_gold + [ingr_repr("minecraft:salmon")]},
+			{"type":"crafting_shapeless","result_count":1,"group":"gold_fish","category":MISCELLANEOUS,"ingredients": eight_gold + [ingr_repr("minecraft:tropical_fish")]},
 		]
 	}
 

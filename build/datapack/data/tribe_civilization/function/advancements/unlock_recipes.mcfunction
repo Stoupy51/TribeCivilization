@@ -8,9 +8,9 @@
 advancement revoke @s only tribe_civilization:unlock_recipes
 
 ## For each ingredient in inventory, unlock the recipes
-# minecraft:gold_nugget
+# minecraft:gold_ingot
 scoreboard players set #success tribe_civilization.data 0
-execute store success score #success tribe_civilization.data if items entity @s container.* minecraft:gold_nugget
+execute store success score #success tribe_civilization.data if items entity @s container.* minecraft:gold_ingot
 execute if score #success tribe_civilization.data matches 1 run recipe give @s tribe_civilization:gold_fish
 execute if score #success tribe_civilization.data matches 1 run recipe give @s tribe_civilization:gold_fish_2
 execute if score #success tribe_civilization.data matches 1 run recipe give @s tribe_civilization:gold_fish_3

@@ -5,7 +5,7 @@ from python_datapack.utils.database_helper import *
 # Constants
 START_OF_NIGHT: int = 13000
 END_OF_NIGHT: int = 23000
-FALLING_STARS_SPAWN_CHANCE: float = 0.01
+FALLING_STARS_SPAWN_CHANCE: float = 0.001
 FALLING_STARS_DROP_CHANCE: float = 0.1
 DURATION: int = 30
 TRANSLATION_X: int = 20
