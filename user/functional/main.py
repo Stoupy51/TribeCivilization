@@ -44,6 +44,7 @@ scoreboard objectives add {ns}.deathCount deathCount
 scoreboard objectives add {ns}.trigger trigger
 scoreboard objectives add {ns}.id dummy
 scoreboard objectives add {ns}.is_not_loyal dummy
+scoreboard objectives add {ns}.timer dummy
 
 # Setup storage if not already done
 execute unless data storage {ns}:main adventure_zones run data modify storage {ns}:main adventure_zones set value []
