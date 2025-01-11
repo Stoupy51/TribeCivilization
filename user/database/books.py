@@ -15,9 +15,15 @@ BOOKS: dict[str, list[list[dict]]] = {
 		[{"text":"Ils ont donc décidé de visiter un autre monde parallèle afin de trouver une solution pour renvoyer la créature dans son monde, ou dans un autre."}],
 		[{"text":"Nous ne sommes plus que 7 nébuliens, j'ai vraiment peur de ce qui pourrait arriver si le demi-dieu manquant venait à revenir pour continuer sa folie."}],
 		[{"text":"J'ai décidé pour le groupe de répartir ces écrits dans le monde et de se regrouper vers le temple des dieux, ainsi nous avons un visuel sur l'île où la créature a été scellée.\n\nD'autres personnes pourraient aussi nous retrouver !"}],
-	]
+	],
 
-	# TODO: Book that says "Le demi-dieu nous a attaqué, il nous a tous tués mais j'ai réussi à échapper, j'arriverais pas à survivre car je l'hémorragie ne s'arrête pas, blablabla"
+	"book_of_the_end": [
+		[{"text":"Le demi-dieu nous a retrouvé. Il est arrivé sans prévenir, surgissant des ombres. Ses cornes semblaient plus grandes, plus menaçantes qu'avant.\n\nSon regard... ce n'était plus celui de mon ami. Ses yeux brillaient d'une lueur maléfique que je n'avais jamais vue auparavant."}],
+		[{"text":"Il nous a attaqué avec une violence inouïe. Mes compagnons... ils n'ont eu aucune chance. J'entends encore leurs cris résonner dans ma tête.\n\nJ'ai réussi à m'échapper, mais son épée m'a transpercé. L'hémorragie ne s'arrête pas, je sens mes forces m'abandonner."}],
+		[{"text":"Avant de partir, il parlait tout seul, murmurant des choses à propos de la créature. Il disait qu'elle l'appelait, qu'elle avait besoin de lui.\n\nJe l'ai vu partir vers le sud-est, en direction de l'île maudite."}],
+		[{"text":"Cette île... impossible de la manquer. Coupée en deux par la corruption de la créature, et sa forme particulière la rend reconnaissable entre mille.\n\nC'est là que la créature est scellée, et c'est là qu'il se dirige."}],
+		[{"text":"Je... je dois prévenir les autres... mais ma vision se trouble déjà. Le sang... il y en a tellement...\n\nSi quelqu'un trouve ce livre... arrêtez-le... avant qu'il ne soit trop... Je... Je n'ai plus..."}]
+	],
 }
 
 # Main function should return a database
