@@ -73,6 +73,8 @@ tellraw @s [{{"text":"\nN'oubliez pas :","color":"red"}}]
 tellraw @s [{{"text":"- [les zones d'aventure]","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:utils/adventure_zone_add {{x: 0, y: 0, z: 0, dx: 0, dy: 0, dz: 0}}"}}}}]
 tellraw @s [{{"text":"- [les Heavy Workbench]","color":"red","clickEvent":{{"action":"suggest_command","value":"/loot give @s loot smithed.crafter:blocks/table"}}}}]
 tellraw @s [{{"text":"- [les météorites]","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:_give_all"}}}}]
+
+tellraw @s [{{"text":"\nPour discuter avec les traitres, utilisez [cette commande]","color":"red","clickEvent":{{"action":"suggest_command","value":"/function {ns}:creature_speak_all {{msg: \\"Je vous baise\\"}}"}}}}]
 """)
 	
 	# Add adventure zone functions

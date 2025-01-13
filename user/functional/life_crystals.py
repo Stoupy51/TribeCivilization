@@ -12,7 +12,7 @@ def main(config: dict) -> None:
 	build_datapack: str = config["build_datapack"]
 
 	# Make advancement when consuming a life crystal
-	write_to_file(f"{build_datapack}/data/{ns}/advancement/technical/life_crystal.json", super_json_dump({
+	write_to_advancement(config, f"{ns}:technical/life_crystal", super_json_dump({
 		"criteria": {
 			"requirement": {
 				"trigger": "minecraft:consume_item",

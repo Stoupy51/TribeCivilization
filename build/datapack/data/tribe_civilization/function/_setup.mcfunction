@@ -19,3 +19,5 @@ tellraw @s [{"translate":"tribe_civilization.les_zones_daventure","color":"red",
 tellraw @s [{"translate":"tribe_civilization.les_heavy_workbench","color":"red","clickEvent":{"action":"suggest_command","value":"/loot give @s loot smithed.crafter:blocks/table"}}]
 tellraw @s [{"translate":"tribe_civilization.les_météorites","color":"red","clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:_give_all"}}]
 
+tellraw @s [{"translate":"tribe_civilization.pour_discuter_avec_les_traitres_utilisez_cette_commande","color":"red","clickEvent":{"action":"suggest_command","value":"/function tribe_civilization:creature_speak_all {msg: \"Je vous baise\"}"}}]
+
