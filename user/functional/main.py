@@ -7,6 +7,7 @@ DARK_AQUA: str = "Tidal Wave"
 YELLOW: str = "The Golden"
 PURPLE: str = "Dream Flower"
 GREEN: str = "Fire in the Hole"
+RED: str = "Divine"
 
 # Main function
 def main(config: dict) -> None:
@@ -20,21 +21,25 @@ team add {ns}.dark_aqua {{"text":"{DARK_AQUA}","color":"dark_aqua"}}
 team add {ns}.yellow {{"text":"{YELLOW}","color":"yellow"}}
 team add {ns}.purple {{"text":"{PURPLE}","color":"dark_purple"}}
 team add {ns}.green {{"text":"{GREEN}","color":"green"}}
+team add {ns}.red {{"text":"{RED}","color":"red"}}
 team modify {ns}.op nametagVisibility never
 team modify {ns}.dark_aqua nametagVisibility never
 team modify {ns}.yellow nametagVisibility never
 team modify {ns}.purple nametagVisibility never
 team modify {ns}.green nametagVisibility never
+team modify {ns}.red nametagVisibility never
 team modify {ns}.op color gray
 team modify {ns}.dark_aqua color dark_aqua
 team modify {ns}.yellow color yellow
 team modify {ns}.purple color dark_purple
 team modify {ns}.green color green
+team modify {ns}.red color red
 team modify {ns}.op prefix {{"text":"[{OP}] ","color":"gray"}}
 team modify {ns}.dark_aqua prefix {{"text":"[{DARK_AQUA}] ","color":"dark_aqua"}}
 team modify {ns}.yellow prefix {{"text":"[{YELLOW}] ","color":"yellow"}}
 team modify {ns}.purple prefix {{"text":"[{PURPLE}] ","color":"dark_purple"}}
 team modify {ns}.green prefix {{"text":"[{GREEN}] ","color":"green"}}
+team modify {ns}.red prefix {{"text":"[{RED}] ","color":"red"}}
 
 # Gamerules
 gamerule showDeathMessages false
@@ -45,6 +50,7 @@ scoreboard objectives add {ns}.trigger trigger
 scoreboard objectives add {ns}.id dummy
 scoreboard objectives add {ns}.is_not_loyal dummy
 scoreboard objectives add {ns}.timer dummy
+scoreboard objectives add {ns}.life_crystals dummy
 
 # Setup storage if not already done
 execute unless data storage {ns}:main adventure_zones run data modify storage {ns}:main adventure_zones set value []

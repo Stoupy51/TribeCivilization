@@ -46,21 +46,25 @@ team add tribe_civilization.dark_aqua {"translate":"tribe_civilization.tidal_wav
 team add tribe_civilization.yellow {"translate":"tribe_civilization.the_golden","color":"yellow"}
 team add tribe_civilization.purple {"translate":"tribe_civilization.dream_flower","color":"dark_purple"}
 team add tribe_civilization.green {"translate":"tribe_civilization.fire_in_the_hole","color":"green"}
+team add tribe_civilization.red {"translate":"tribe_civilization.divine","color":"red"}
 team modify tribe_civilization.op nametagVisibility never
 team modify tribe_civilization.dark_aqua nametagVisibility never
 team modify tribe_civilization.yellow nametagVisibility never
 team modify tribe_civilization.purple nametagVisibility never
 team modify tribe_civilization.green nametagVisibility never
+team modify tribe_civilization.red nametagVisibility never
 team modify tribe_civilization.op color gray
 team modify tribe_civilization.dark_aqua color dark_aqua
 team modify tribe_civilization.yellow color yellow
 team modify tribe_civilization.purple color dark_purple
 team modify tribe_civilization.green color green
+team modify tribe_civilization.red color red
 team modify tribe_civilization.op prefix {"text":"[Organizer] ","color":"gray"}
 team modify tribe_civilization.dark_aqua prefix {"text":"[Tidal Wave] ","color":"dark_aqua"}
 team modify tribe_civilization.yellow prefix {"text":"[The Golden] ","color":"yellow"}
 team modify tribe_civilization.purple prefix {"text":"[Dream Flower] ","color":"dark_purple"}
 team modify tribe_civilization.green prefix {"text":"[Fire in the Hole] ","color":"green"}
+team modify tribe_civilization.red prefix {"text":"[Divine] ","color":"red"}
 
 # Gamerules
 gamerule showDeathMessages false
@@ -71,6 +75,7 @@ scoreboard objectives add tribe_civilization.trigger trigger
 scoreboard objectives add tribe_civilization.id dummy
 scoreboard objectives add tribe_civilization.is_not_loyal dummy
 scoreboard objectives add tribe_civilization.timer dummy
+scoreboard objectives add tribe_civilization.life_crystals dummy
 
 # Setup storage if not already done
 execute unless data storage tribe_civilization:main adventure_zones run data modify storage tribe_civilization:main adventure_zones set value []

@@ -6,6 +6,7 @@ from user.others.font import main as font_main
 from user.functional.main import main as functional_main
 from user.functional.player_loops import main as player_loops
 from user.functional.falling_stars import main as falling_stars
+from user.functional.life_crystals import main as life_crystals
 from user.functional.state_0 import main as state_0
 from user.functional.state_1 import main as state_1
 from user.functional.state_2 import main as state_2
@@ -19,6 +20,7 @@ def main(config: dict) -> None:
     functional_main(config)
     player_loops(config)
     falling_stars(config)
+    life_crystals(config)
     state_0(config)
     state_1(config)
     state_2(config)
