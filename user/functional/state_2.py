@@ -21,9 +21,8 @@ execute if score #state {ns}.data matches 2.. run function {ns}:states/tick_2
 # Always saturation if not foodLevel at max for traitors
 execute as @a[tag={ns}.traitor] unless data entity @s {{foodLevel:20}} run effect give @s saturation 1 0 true
 
-
-
-
+# Control entity as OP
+execute as @a[gamemode=creative,team={ns}.op] at @s run function {ns}:entity/control_nearest
 """)
 	
 	# Function speak as the creature to @s or @a[tag={ns}.traitor]
@@ -76,6 +75,12 @@ function {ns}:creature_speak_all {{"msg":"Il me faut 3 fragments de chaque coule
 tellraw @s ""
 function {ns}:creature_speak_all {{"msg":"Je vous laisse 10 minutes pour venir me rencontrer en 4800 6300... L'île est assez isolée, vous ne devriez trouver personne par hasard en ce lieu..."}}
 tellraw @s ""
+""")
+
+	# Function called by admin that control the nearest entity
+	write_to_function(config, f"{ns}:entity/control_nearest", f"""
+# Control entity
+tp @n[type=warden,distance=..2] @s
 """)
 
 	pass

@@ -65,6 +65,7 @@ team modify tribe_civilization.yellow prefix {"text":"[The Golden] ","color":"ye
 team modify tribe_civilization.purple prefix {"text":"[Dream Flower] ","color":"dark_purple"}
 team modify tribe_civilization.green prefix {"text":"[Fire in the Hole] ","color":"green"}
 team modify tribe_civilization.red prefix {"text":"[Divine] ","color":"red"}
+team modify tribe_civilization.op collisionRule never
 
 # Gamerules
 gamerule showDeathMessages false

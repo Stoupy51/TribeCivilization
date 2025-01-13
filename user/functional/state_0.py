@@ -53,7 +53,6 @@ clear @a[gamemode=adventure]
 scoreboard players set @a[gamemode=adventure] {ns}.is_not_loyal -1
 tellraw @a[gamemode=adventure] [{{"text":"{backslash_n}Question simple : Voulez-vous être loyal à votre tribu ?", "color":"aqua"}}]
 tellraw @a[gamemode=adventure] [{{"text":"[Je le serais]", "color":"green","clickEvent":{{"action":"run_command","value":"/trigger {ns}.trigger set 1"}},"hoverEvent":{{"action":"show_text","value":"Ma tribu peut compter sur moi !"}}}},{{"text":" | ","color":"gray"}},{{"text":"[Hell nah]", "color":"red","clickEvent":{{"action":"run_command","value":"/trigger {ns}.trigger set 2"}},"hoverEvent":{{"action":"show_text","value":"Dis moi en plus !"}}}}]
-
 """)
 
 	pass

@@ -40,6 +40,7 @@ team modify {ns}.yellow prefix {{"text":"[{YELLOW}] ","color":"yellow"}}
 team modify {ns}.purple prefix {{"text":"[{PURPLE}] ","color":"dark_purple"}}
 team modify {ns}.green prefix {{"text":"[{GREEN}] ","color":"green"}}
 team modify {ns}.red prefix {{"text":"[{RED}] ","color":"red"}}
+team modify {ns}.op collisionRule never
 
 # Gamerules
 gamerule showDeathMessages false
@@ -106,6 +107,9 @@ execute if data storage {ns}:temp copy[0] run function {ns}:utils/adventure_zone
 	write_to_tick_file(config, f"""
 # Increase total time
 scoreboard players add #game_total_time {ns}.data 1
+
+# Invisibility effect for OP
+effect give @a[gamemode=!adventure,gamemode=!spectator,team={ns}.op] invisibility 1 0 true
 """)
 	
 	# Reset function
