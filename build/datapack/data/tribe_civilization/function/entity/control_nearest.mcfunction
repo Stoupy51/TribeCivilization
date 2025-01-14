@@ -5,5 +5,5 @@
 #
 
 # Control entity
-tp @n[type=warden,distance=..2] @s
+tp @n[type=warden,distance=..5] @s
 

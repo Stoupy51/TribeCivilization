@@ -16,15 +16,13 @@ execute if score #state {ns}.data matches 2.. run function {ns}:states/tick_2
 	
 	# Tick
 	write_to_function(config, f"{ns}:states/tick_2", f"""
-# TODO: add functionality
-
 # Always saturation if not foodLevel at max for traitors
 execute as @a[tag={ns}.traitor] unless data entity @s {{foodLevel:20}} run effect give @s saturation 1 0 true
 
 # Control entity as OP
 execute as @a[gamemode=creative,team={ns}.op] at @s run function {ns}:entity/control_nearest
 """)
-	
+
 	# Function speak as the creature to @s or @a[tag={ns}.traitor]
 	def basic_sound(selector: str = "@s") -> str:
 		return f"\nexecute as {selector} at @s run playsound entity.warden.attack_impact ambient @s"
@@ -80,7 +78,7 @@ tellraw @s ""
 	# Function called by admin that control the nearest entity
 	write_to_function(config, f"{ns}:entity/control_nearest", f"""
 # Control entity
-tp @n[type=warden,distance=..2] @s
+tp @n[type=warden,distance=..5] @s
 """)
 
 	pass
