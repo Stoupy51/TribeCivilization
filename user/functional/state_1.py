@@ -71,7 +71,7 @@ execute if score #next_team {ns}.data matches 4 run scoreboard players set #next
 """)
 	
 	# Teleport function
-	write_to_function(config, f"{ns}:teams/teleport", f"$tp @a[team={ns}.$(team)] $(x) $(y) $(z)")
+	write_to_function(config, f"{ns}:teams/teleport", f"$spreadplayers $(x) $(z) 0 10 false @a[team={ns}.$(team)]")
 
 	pass
 

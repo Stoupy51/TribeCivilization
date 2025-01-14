@@ -44,6 +44,7 @@ scoreboard players set #state {ns}.data 1
 scoreboard players set #game_total_time {ns}.data 0
 execute as @a run function {ns}:utils/black_screen_20_40_0
 team join {ns}.op @a[gamemode=creative]
+worldborder set 4000
 
 # Clear all & effects
 effect clear @a[gamemode=adventure]

@@ -83,6 +83,24 @@ tellraw @s ""
 # Control entity
 tp @n[type=warden,distance=..5] @s
 """)
+	
+	# Transition to state 3
+	write_to_function(config, f"{ns}:states/transition_to_3", f"""
+# Set state to 3
+scoreboard players set #state {ns}.data 3
+
+# Create bossbar
+bossbar add {ns}:creature_bar [{{"text":"Bloodlust","color":"red"}}]
+bossbar set {ns}:creature_bar color red
+bossbar set {ns}:creature_bar max 1000
+bossbar set {ns}:creature_bar value 1000
+bossbar set {ns}:creature_bar visible true
+bossbar set {ns}:creature_bar style notched_6
+
+# Playsound and border
+execute at @e[tag={ns}.creature] run playsound entity.warden.emerge ambient @a ~ ~ ~ 10000 0.8 1
+worldborder set 500 2700
+""")
 
 	pass
 
