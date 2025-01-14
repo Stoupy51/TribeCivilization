@@ -18,8 +18,8 @@ BOOKS: dict[str, list[list[dict]]] = {
 	],
 
 	"book_of_the_end": [
-		[{"text":"Le demi-dieu nous a retrouvé. Il est arrivé sans prévenir, surgissant des ombres. Ses cornes semblaient plus grandes, plus menaçantes qu'avant.\n\nSon regard... ce n'était plus celui de mon ami. Ses yeux brillaient d'une lueur maléfique que je n'avais jamais vue auparavant."}],
-		[{"text":"Il nous a attaqué avec une violence inouïe. Mes compagnons... ils n'ont eu aucune chance. J'entends encore leurs cris résonner dans ma tête.\n\nJ'ai réussi à m'échapper, mais son épée m'a transpercé. L'hémorragie ne s'arrête pas, je sens mes forces m'abandonner."}],
+		[{"text":"Le demi-dieu nous a retrouvé. Il est arrivé sans prévenir, surgissant des ombres. Ses cornes semblaient plus grandes, plus menaçantes qu'avant.\n\nSon regard... ce n'était plus celui de mon ami. Une lueur maléfique brillait dans ses yeux."}],
+		[{"text":"Il nous a attaqué avec une violence inouïe. Mes compagnons... J'entends encore leurs cris résonner dans ma tête.\nJ'ai réussi à m'échapper, mais son épée m'a transpercé. L'hémorragie ne s'arrête pas, je sens mes forces me quitter."}],
 		[{"text":"Avant de partir, il parlait tout seul, murmurant des choses à propos de la créature. Il disait qu'elle l'appelait, qu'elle avait besoin de lui.\n\nJe l'ai vu partir vers le sud-est, en direction de l'île maudite."}],
 		[{"text":"Cette île... impossible de la manquer. Coupée en deux par la corruption de la créature, et sa forme particulière la rend reconnaissable entre mille.\n\nC'est là que la créature est scellée, et c'est là qu'il se dirige."}],
 		[{"text":"Je... je dois prévenir les autres... mais ma vision se trouble déjà. Le sang... il y en a tellement...\n\nSi quelqu'un trouve ce livre... arrêtez-le... avant qu'il ne soit trop... Je... Je n'ai plus..."}]

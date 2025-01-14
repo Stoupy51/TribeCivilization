@@ -14,7 +14,7 @@ execute if score #second_5 tribe_civilization.data matches 90.. run function tri
 scoreboard players add #game_total_time tribe_civilization.data 1
 
 # Invisibility effect for OP
-effect give @a[gamemode=!adventure,gamemode=!spectator,team=tribe_civilization.op] invisibility 1 0 true
+effect give @a[gamemode=!adventure,gamemode=!survival,team=tribe_civilization.op] invisibility 1 0 true
 
 # Each tick loop for each player
 execute as @a[sort=random] run function tribe_civilization:player/tick

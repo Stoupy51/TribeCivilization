@@ -109,7 +109,7 @@ execute if data storage {ns}:temp copy[0] run function {ns}:utils/adventure_zone
 scoreboard players add #game_total_time {ns}.data 1
 
 # Invisibility effect for OP
-effect give @a[gamemode=!adventure,gamemode=!spectator,team={ns}.op] invisibility 1 0 true
+effect give @a[gamemode=!adventure,gamemode=!survival,team={ns}.op] invisibility 1 0 true
 """)
 	
 	# Reset function
