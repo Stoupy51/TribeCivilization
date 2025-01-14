@@ -10,10 +10,10 @@ scoreboard players set #state tribe_civilization.data 3
 # Create bossbar
 bossbar add tribe_civilization:creature_bar [{"translate":"tribe_civilization.bloodlust","color":"red"}]
 bossbar set tribe_civilization:creature_bar color red
-bossbar set tribe_civilization:creature_bar max 1000
-bossbar set tribe_civilization:creature_bar value 1000
+bossbar set tribe_civilization:creature_bar max 500
+bossbar set tribe_civilization:creature_bar value 500
 bossbar set tribe_civilization:creature_bar visible true
-bossbar set tribe_civilization:creature_bar style notched_6
+bossbar set tribe_civilization:creature_bar style notched_20
 
 # Playsound and border
 execute at @e[tag=tribe_civilization.creature] run playsound entity.warden.emerge ambient @a ~ ~ ~ 10000 0.8 1

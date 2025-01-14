@@ -4,9 +4,8 @@
 # @within	tribe_civilization:v1.0.0/tick
 #
 
-# TODO: add functionality
-
-
+# Loop for the creature
+execute as @e[tag=tribe_civilization.creature] at @s run function tribe_civilization:states/creature_tick
 
 
 

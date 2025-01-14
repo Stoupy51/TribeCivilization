@@ -92,10 +92,10 @@ scoreboard players set #state {ns}.data 3
 # Create bossbar
 bossbar add {ns}:creature_bar [{{"text":"Bloodlust","color":"red"}}]
 bossbar set {ns}:creature_bar color red
-bossbar set {ns}:creature_bar max 1000
-bossbar set {ns}:creature_bar value 1000
+bossbar set {ns}:creature_bar max 500
+bossbar set {ns}:creature_bar value 500
 bossbar set {ns}:creature_bar visible true
-bossbar set {ns}:creature_bar style notched_6
+bossbar set {ns}:creature_bar style notched_20
 
 # Playsound and border
 execute at @e[tag={ns}.creature] run playsound entity.warden.emerge ambient @a ~ ~ ~ 10000 0.8 1
