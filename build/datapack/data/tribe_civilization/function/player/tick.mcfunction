@@ -14,3 +14,6 @@ execute unless score @s tribe_civilization.trigger matches 0 run function tribe_
 # Particles on death location
 execute if score @s tribe_civilization.deathCount matches 1.. run function tribe_civilization:player/particles_on_death_location
 
+# If traitor, loop
+execute if entity @s[tag=tribe_civilization.traitor] run function tribe_civilization:player/traitor_loop
+

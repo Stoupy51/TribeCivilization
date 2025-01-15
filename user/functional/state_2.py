@@ -16,9 +16,6 @@ execute if score #state {ns}.data matches 2.. run function {ns}:states/tick_2
 	
 	# Tick
 	write_to_function(config, f"{ns}:states/tick_2", f"""
-# Always saturation if not foodLevel at max for traitors
-execute as @a[tag={ns}.traitor] unless data entity @s {{foodLevel:20}} run effect give @s saturation 1 0 true
-
 # Join traitor team for every entity
 team join {ns}.red @e[type=!player,type=!wolf,team=!{ns}.red]
 

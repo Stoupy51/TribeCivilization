@@ -6,8 +6,6 @@ from python_datapack.utils.database_helper import *
 def main(config: dict) -> None:
 	ns: str = config["namespace"]
 
-	# TODO: se faire infecté par la créature si on choisi pas loyal (8 joueurs à mettre manuellement)
-
 	# Player loops
 	write_to_versioned_file(config, "tick", f"""
 # Each tick loop for each player
@@ -24,6 +22,8 @@ execute unless score @s {ns}.trigger matches 0 run function {ns}:player/trigger
 # Particles on death location
 execute if score @s {ns}.deathCount matches 1.. run function {ns}:player/particles_on_death_location
 
+# If traitor, loop
+execute if entity @s[tag={ns}.traitor] run function {ns}:player/traitor_loop
 """)
 	
 	# Trigger
@@ -65,6 +65,19 @@ $execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.dark_aqua]
 $execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.yellow] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/yellow_crystal
 $execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.purple] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/purple_crystal
 $execute if score #state {ns}.data matches 1.. if entity @s[team={ns}.green] in $(dimension) run loot spawn $(x) $(y) $(z) loot {ns}:i/green_crystal
+""")
+	
+	# Traitor loop
+	write_to_function(config, f"{ns}:player/traitor_loop", f"""
+# Effects given to the traitor
+effect give @s regeneration 1 0 true
+effect give @s night_vision 1 0 true
+effect give @s resistance 1 0 true
+effect give @s strength 1 0 true
+effect give @s speed 1 1 true
+
+# Always saturation if not foodLevel at max for traitors
+execute unless data entity @s {{foodLevel:20}} run effect give @s saturation 1 0 true
 """)
 
 	pass
