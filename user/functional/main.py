@@ -17,11 +17,11 @@ def main(config: dict) -> None:
 	write_to_load_file(config, f"""
 # Add teams
 team add {ns}.op {{"text":"{OP}","color":"gray"}}
-team add {ns}.dark_aqua {{"text":"{DARK_AQUA}","color":"dark_aqua"}}
-team add {ns}.yellow {{"text":"{YELLOW}","color":"yellow"}}
-team add {ns}.purple {{"text":"{PURPLE}","color":"dark_purple"}}
-team add {ns}.green {{"text":"{GREEN}","color":"green"}}
-team add {ns}.red {{"text":"{RED}","color":"red"}}
+team add {ns}.dark_aqua {{"text":"Talkie-Walkie","color":"dark_aqua"}}
+team add {ns}.yellow {{"text":"Talkie-Walkie","color":"yellow"}}
+team add {ns}.purple {{"text":"Talkie-Walkie","color":"dark_purple"}}
+team add {ns}.green {{"text":"Talkie-Walkie","color":"green"}}
+team add {ns}.red {{"text":"Talkie-Walkie","color":"red"}}
 team modify {ns}.op nametagVisibility never
 team modify {ns}.dark_aqua nametagVisibility never
 team modify {ns}.yellow nametagVisibility never
