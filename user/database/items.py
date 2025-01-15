@@ -119,4 +119,6 @@ def main(config: dict, database: dict[str, dict]) -> None:
 		OVERRIDE_MODEL: {"credit":"Made with Blockbench","parent":f"{ns}:item/horns","textures":horn_textures,"display":{"head": {"translation": [0, 10, -4],"scale": [0.75, 0.75, 0.75]}}}
 	}
 
+	# Blood to turn into traitor phase
+	database["blood"] = {"id": CUSTOM_ITEM_VANILLA, "consumable": {"sound":"entity.witch.drink"}}
 
