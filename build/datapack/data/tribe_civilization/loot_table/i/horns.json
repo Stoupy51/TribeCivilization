@@ -1,0 +1,34 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_stack_size": 1,
+								"minecraft:equippable": {
+									"slot": "head"
+								},
+								"minecraft:item_model": "tribe_civilization:horns",
+								"minecraft:item_name": "{\"translate\":\"tribe_civilization.horns\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:lore": [
+									"[\"\", {\"text\":\"I\", \"color\": \"white\", \"italic\": false, \"font\": \"tribe_civilization:icons\"}, {\"translate\":\"tribe_civilization\", \"italic\": true, \"color\": \"blue\"}]"
+								],
+								"minecraft:custom_data": {
+									"tribe_civilization": {"horns": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

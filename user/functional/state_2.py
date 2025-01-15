@@ -1,7 +1,6 @@
 
 # Imports
 from python_datapack.utils.database_helper import *
-from user.functional.main import DARK_AQUA, YELLOW, PURPLE, GREEN
 
 # Main function
 def main(config: dict) -> None:

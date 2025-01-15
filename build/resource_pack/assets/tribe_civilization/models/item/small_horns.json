@@ -1,0 +1,23 @@
+{
+	"parent": "tribe_civilization:item/horns",
+	"textures": {
+		"0": "tribe_civilization:item/horns",
+		"particle": "tribe_civilization:item/horns"
+	},
+	"credit": "Made with Blockbench",
+	"display": {
+		"head": {
+			"translation": [
+				0,
+				10,
+				-4
+			],
+			"scale": [
+				0.75,
+				0.75,
+				0.75
+			]
+		}
+	}
+}
+
