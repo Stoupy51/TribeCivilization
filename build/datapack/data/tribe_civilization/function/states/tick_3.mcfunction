@@ -7,6 +7,3 @@
 # Loop for the creature
 execute as @e[tag=tribe_civilization.creature] at @s run function tribe_civilization:states/creature_tick
 
-
-
-

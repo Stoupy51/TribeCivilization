@@ -1,0 +1,9 @@
+{
+	"criteria": {
+		"requirement": {"trigger": "minecraft:consume_item","conditions": {"item": {"predicates": {"minecraft:custom_data": {"tribe_civilization": {"blood": true}}}}}}
+	},
+	"rewards": {
+		"function": "tribe_civilization:advancements/blood"
+	}
+}
+
