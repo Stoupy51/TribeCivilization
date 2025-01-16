@@ -9,7 +9,6 @@ HEALTH_PER_CRYSTAL: float = 1.0
 # Main function
 def main(config: dict) -> None:
 	ns: str = config["namespace"]
-	build_datapack: str = config["build_datapack"]
 
 	# Make advancement when consuming a life crystal
 	write_to_advancement(config, f"{ns}:technical/life_crystal", super_json_dump({

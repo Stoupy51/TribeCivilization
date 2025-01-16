@@ -1,0 +1,22 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"tribe_civilization": {
+								"lunar_compass": true
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "tribe_civilization:advancements/lunar_compass"
+	}
+}
+
