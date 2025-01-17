@@ -10,6 +10,9 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:consumable": {
+									"sound": "entity.ghast.scream"
+								},
 								"minecraft:item_model": "tribe_civilization:lunar_compass",
 								"minecraft:item_name": "{\"translate\":\"tribe_civilization.lunar_compass\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:lore": [
