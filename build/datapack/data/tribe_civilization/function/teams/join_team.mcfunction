@@ -2,6 +2,7 @@
 #> tribe_civilization:teams/join_team
 #
 # @within	tribe_civilization:states/transition_to_2
+#			tribe_civilization:teams/parachute
 #
 
 # Join team

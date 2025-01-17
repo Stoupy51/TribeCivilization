@@ -17,7 +17,7 @@ execute if score #state {ns}.data matches 0 run function {ns}:states/tick_0
 	write_to_function(config, f"{ns}:states/tick_0", f"""
 # Ensure effects
 effect give @a saturation infinite 0 true
-effect give @a regeneration infinite 0 true
+effect give @a regeneration infinite 3 true
 
 # Ensure everyone has his ID
 execute as @a unless score @s {ns}.id matches 1.. run function {ns}:utils/next_id

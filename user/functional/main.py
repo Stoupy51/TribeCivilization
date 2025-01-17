@@ -42,6 +42,9 @@ team modify {ns}.green prefix {{"text":"[{GREEN}] ","color":"green"}}
 team modify {ns}.red prefix {{"text":"[{RED}] ","color":"red"}}
 team modify {ns}.op collisionRule never
 
+# Forceload zones
+schedule function {ns}:utils/forceload_all 1s
+
 # Gamerules
 gamerule showDeathMessages false
 
@@ -118,6 +121,17 @@ scoreboard players set #game_total_time {ns}.data 0
 scoreboard players set #state {ns}.data 0
 tp @a 4240 262 5664
 team leave @a
+""")
+	
+	# Forceload functions
+	write_to_function(config, f"{ns}:utils/forceload_all", f"""
+function {ns}:utils/forceload_macro with storage {ns}:main camp_dark_aqua
+function {ns}:utils/forceload_macro with storage {ns}:main camp_yellow
+function {ns}:utils/forceload_macro with storage {ns}:main camp_purple
+function {ns}:utils/forceload_macro with storage {ns}:main camp_green
+""")
+	write_to_function(config, f"{ns}:utils/forceload_macro", f"""
+$execute positioned $(x) 0 $(z) run forceload add ~-112 ~-112 ~112 ~112
 """)
 
 	pass

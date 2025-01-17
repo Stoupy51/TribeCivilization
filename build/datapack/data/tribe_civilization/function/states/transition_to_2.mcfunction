@@ -14,7 +14,7 @@ execute as @a run function tribe_civilization:utils/black_screen_0_40_20
 
 # Join teams
 scoreboard players set #next_team tribe_civilization.data 0
-execute as @a[gamemode=adventure,sort=random] run function tribe_civilization:teams/join_team
+execute as @a[gamemode=adventure] run function tribe_civilization:teams/join_team
 
 # Teleportations
 data modify storage tribe_civilization:main camp_dark_aqua.team set value "dark_aqua"

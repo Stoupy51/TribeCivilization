@@ -71,6 +71,9 @@ team modify tribe_civilization.green prefix {"translate":"tribe_civilization.fir
 team modify tribe_civilization.red prefix {"translate":"tribe_civilization.divine","color":"red"}
 team modify tribe_civilization.op collisionRule never
 
+# Forceload zones
+schedule function tribe_civilization:utils/forceload_all 1s
+
 # Gamerules
 gamerule showDeathMessages false
 
