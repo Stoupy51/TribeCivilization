@@ -1,0 +1,9 @@
+{
+	"criteria": {
+		"requirement": {"trigger": "minecraft:inventory_changed"}
+	},
+	"rewards": {
+		"function": "tribe_civilization:advancements/inventory_changed"
+	}
+}
+

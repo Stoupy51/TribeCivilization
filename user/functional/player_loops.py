@@ -55,6 +55,9 @@ execute at @s run playsound {ns}:game_over ambient @s
 function {ns}:player/on_death_location_macro with storage {ns}:temp death_location
 scoreboard players reset @s {ns}.deathCount
 gamemode spectator @s
+
+# Notify OPs about death
+tellraw @a[team={ns}.op] [{{"selector":"@s"}},{{"text":" a été tué"}}]
 """)
 	write_to_function(config, f"{ns}:player/on_death_location_macro", f"""
 # Particles and playsound

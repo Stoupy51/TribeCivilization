@@ -19,3 +19,6 @@ function tribe_civilization:player/on_death_location_macro with storage tribe_ci
 scoreboard players reset @s tribe_civilization.deathCount
 gamemode spectator @s
 
+# Notify OPs about death
+tellraw @a[team=tribe_civilization.op] [{"selector":"@s"},{"translate":"tribe_civilization.a_été_tué"}]
+
