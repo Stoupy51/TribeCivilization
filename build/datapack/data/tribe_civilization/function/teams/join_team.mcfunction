@@ -19,5 +19,5 @@ execute if score #next_team tribe_civilization.data matches 3 run item replace e
 
 # Increment next team (modulo 4)
 scoreboard players add #next_team tribe_civilization.data 1
-execute if score #next_team tribe_civilization.data matches 4 run scoreboard players set #next_team tribe_civilization.data 0
+execute if score #next_team tribe_civilization.data matches 2 run scoreboard players set #next_team tribe_civilization.data 0
 

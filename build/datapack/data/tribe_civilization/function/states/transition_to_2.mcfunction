@@ -10,6 +10,8 @@ scoreboard players set @a[scores={tribe_civilization.is_not_loyal=-1}] tribe_civ
 
 # Clear all effects and make black screen fade out
 effect clear @a
+effect give @a resistance 60 255 true
+effect give @a regeneration 60 255 true
 execute as @a run function tribe_civilization:utils/black_screen_0_40_20
 
 # Join teams

@@ -12,7 +12,6 @@ advancement revoke @s only tribe_civilization:technical/inventory_changed
 execute if items entity @s[tag=!tribe_civilization.had_map] container.* filled_map run tellraw @a[team=tribe_civilization.op] [{"selector":"@s"},{"translate":"tribe_civilization.a_obtenu_une_map"}]
 execute if items entity @s[tag=!tribe_civilization.had_map] container.* filled_map run tag @s add tribe_civilization.had_map
 
-
 # Life Crystal
 execute if items entity @s[tag=!tribe_civilization.had_life_crystal] container.* *[custom_data~{tribe_civilization:{"life_crystal":true}}] run tellraw @a[team=tribe_civilization.op] [{"selector":"@s"},{"translate":"tribe_civilization.a_obtenu_un_life_crystal"}]
 execute if items entity @s[tag=!tribe_civilization.had_life_crystal] container.* *[custom_data~{tribe_civilization:{"life_crystal":true}}] run tag @s add tribe_civilization.had_life_crystal

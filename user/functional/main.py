@@ -23,11 +23,11 @@ team add {ns}.purple {{"text":"Talkie-Walkie","color":"dark_purple"}}
 team add {ns}.green {{"text":"Talkie-Walkie","color":"green"}}
 team add {ns}.red {{"text":"Talkie-Walkie","color":"red"}}
 team modify {ns}.op nametagVisibility never
-team modify {ns}.dark_aqua nametagVisibility never
-team modify {ns}.yellow nametagVisibility never
-team modify {ns}.purple nametagVisibility never
-team modify {ns}.green nametagVisibility never
-team modify {ns}.red nametagVisibility never
+team modify {ns}.dark_aqua nametagVisibility always
+team modify {ns}.yellow nametagVisibility always
+team modify {ns}.purple nametagVisibility always
+team modify {ns}.green nametagVisibility always
+team modify {ns}.red nametagVisibility always
 team modify {ns}.op color gray
 team modify {ns}.dark_aqua color dark_aqua
 team modify {ns}.yellow color yellow

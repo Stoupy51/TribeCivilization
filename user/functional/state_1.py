@@ -33,6 +33,8 @@ scoreboard players set @a[scores={{{ns}.is_not_loyal=-1}}] {ns}.is_not_loyal 0
 
 # Clear all effects and make black screen fade out
 effect clear @a
+effect give @a resistance 60 255 true
+effect give @a regeneration 60 255 true
 execute as @a run function {ns}:utils/black_screen_0_40_20
 
 # Join teams
@@ -67,7 +69,7 @@ execute if score #next_team {ns}.data matches 3 run item replace entity @s armor
 
 # Increment next team (modulo 4)
 scoreboard players add #next_team {ns}.data 1
-execute if score #next_team {ns}.data matches 4 run scoreboard players set #next_team {ns}.data 0
+execute if score #next_team {ns}.data matches 2 run scoreboard players set #next_team {ns}.data 0
 """)
 	
 	# Teleport function

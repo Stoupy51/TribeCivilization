@@ -52,11 +52,11 @@ team add tribe_civilization.purple {"translate":"tribe_civilization.talkie_walki
 team add tribe_civilization.green {"translate":"tribe_civilization.talkie_walkie","color":"green"}
 team add tribe_civilization.red {"translate":"tribe_civilization.talkie_walkie","color":"red"}
 team modify tribe_civilization.op nametagVisibility never
-team modify tribe_civilization.dark_aqua nametagVisibility never
-team modify tribe_civilization.yellow nametagVisibility never
-team modify tribe_civilization.purple nametagVisibility never
-team modify tribe_civilization.green nametagVisibility never
-team modify tribe_civilization.red nametagVisibility never
+team modify tribe_civilization.dark_aqua nametagVisibility always
+team modify tribe_civilization.yellow nametagVisibility always
+team modify tribe_civilization.purple nametagVisibility always
+team modify tribe_civilization.green nametagVisibility always
+team modify tribe_civilization.red nametagVisibility always
 team modify tribe_civilization.op color gray
 team modify tribe_civilization.dark_aqua color dark_aqua
 team modify tribe_civilization.yellow color yellow

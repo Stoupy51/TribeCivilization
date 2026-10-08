@@ -10,6 +10,7 @@ scoreboard players set #game_total_time tribe_civilization.data 0
 execute as @a run function tribe_civilization:utils/black_screen_20_40_0
 team join tribe_civilization.op @a[gamemode=creative]
 worldborder set 4000
+time set 0
 
 # Clear all & effects
 effect clear @a[gamemode=adventure]
